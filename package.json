@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "echo 'No tests implemented.'",
-    "lint": "eslint src"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^3.2.1",
