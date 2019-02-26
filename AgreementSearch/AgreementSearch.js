@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 import { Button, Icon } from '@folio/stripes/components';
 import AgreementSearchModal from './AgreementSearchModal';
 
+const triggerId = 'find-agreement-trigger';
 class AgreementSearch extends React.Component {
   static propTypes = {
-    searchButtonLabel: PropTypes.node,
-    searchButtonStyle: PropTypes.string,
-  };
-
-  static defaultProps = {
-    searchButtonStyle: 'primary noRightRadius',
+    renderTrigger: PropTypes.func,
   };
 
   state = {
@@ -25,18 +21,35 @@ class AgreementSearch extends React.Component {
     this.setState({ open: false });
   }
 
+  renderDefaultTrigger() {
+    return (
+      <Button
+        id={triggerId}
+        buttonStyle="primary noRightRadius"
+        onClick={this.openModal}
+      >
+        <Icon icon="search" color="#fff" />
+      </Button>
+    );
+  }
+
+  renderTriggerButton() {
+    const {
+      renderTrigger,
+    } = this.props;
+
+    return renderTrigger
+      ? renderTrigger({
+        id: triggerId,
+        onClick: this.openModal,
+      })
+      : this.renderDefaultTrigger();
+  }
+
   render() {
     return (
       <React.Fragment>
-        <Button
-          id="clickable-find-agreement"
-          buttonStyle={this.props.searchButtonStyle}
-          onClick={this.openModal}
-        >
-          <Icon icon="search" color="#fff">
-            {this.props.searchButtonLabel}
-          </Icon>
-        </Button>
+        {this.renderTriggerButton()}
         <AgreementSearchModal
           open={this.state.open}
           onClose={this.closeModal}
