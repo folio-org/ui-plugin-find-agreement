@@ -42,6 +42,7 @@ export default class AgreementSearchModal extends React.Component {
         <this.connectedApp
           {...this.props}
           browseOnly
+          disableRecordCreation
           onComponentWillUnmount={this.props.onClose}
           onSelectRow={this.selectAgreement}
           showSingleResult={false}

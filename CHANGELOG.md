@@ -1,5 +1,8 @@
 # Change history for ui-plugin-find-agreement
 
+## 2.1.1
+* Disabled record creation
+
 ## 2.1.0
 * Support custom trigger button rendering
 
