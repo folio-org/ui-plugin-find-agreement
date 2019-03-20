@@ -13,11 +13,19 @@ type="find-agreement">` element. See [the *Plugins*
 section](https://github.com/folio-org/stripes-core/blob/master/doc/dev-guide.md#plugins)
 of the Module Developer's Guide.
 
+## Props
+
+| Name | Type | Description | Required |
+--- | --- | --- | --- |
+| `onAgreementSelected` | func: (agreement) => {} | Callback fired when a user clicks a agreement | Yes |
+| `dataKey` | string | Optional `dataKey` passed to stripes/connect when creating the connected Agreements component. |  |
+| `renderTrigger` | func: ({ triggerId, onClick }) => {} | Optional render function for the button to open the License search modal. The `onClick` prop should be called when the trigger is clicked (assuming it is a Button). | |
+
 ## Additional information
 
 Other [modules](https://dev.folio.org/source-code/#client-side).
 
-See project [UIER](https://issues.folio.org/browse/UIER)
+See project [ERM](https://issues.folio.org/browse/ERM)
 at the [FOLIO issue tracker](https://dev.folio.org/guidelines/issue-tracker/).
 
 Other FOLIO Developer documentation is at [dev.folio.org](https://dev.folio.org/)
