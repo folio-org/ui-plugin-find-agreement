@@ -1,5 +1,8 @@
 # Change history for ui-plugin-find-agreement
 
+## 2.1.2
+* Added translations
+
 ## 2.1.1
 * Disabled record creation
 
