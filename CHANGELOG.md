@@ -1,5 +1,8 @@
 # Change history for ui-plugin-find-agreement
 
+## 3.0.0 IN PROGRESS
+* Removed dependency on ui-agreements.
+
 ## 2.1.2
 * Added translations
 

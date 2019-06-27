@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Icon } from '@folio/stripes/components';
-import AgreementSearchModal from './AgreementSearchModal';
+import Modal from './Modal';
 
 const triggerId = 'find-agreement-trigger';
-class AgreementSearch extends React.Component {
+
+export default class AgreementSearch extends React.Component {
   static propTypes = {
     renderTrigger: PropTypes.func,
   };
@@ -50,7 +51,7 @@ class AgreementSearch extends React.Component {
     return (
       <React.Fragment>
         {this.renderTriggerButton()}
-        <AgreementSearchModal
+        <Modal
           open={this.state.open}
           onClose={this.closeModal}
           {...this.props}
@@ -60,5 +61,3 @@ class AgreementSearch extends React.Component {
     );
   }
 }
-
-export default AgreementSearch;
