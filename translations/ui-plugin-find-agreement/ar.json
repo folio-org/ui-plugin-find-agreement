@@ -1,4 +1,16 @@
 {
     "selectAgreement": "اختر اتفاقية",
-    "meta.title": "باحث اتفاقية إدارة الموارد الإلكترونية (برنامج مساعد)"
+    "meta.title": "باحث اتفاقية إدارة الموارد الإلكترونية (برنامج مساعد)",
+    "agreements": "الاتفاقيات",
+    "searchInputLabel": "بحث الاتفاقيات",
+    "prop.agreementStatus": "الحالة",
+    "prop.cancellationDeadline": "الموعد النهائي للإلغاء",
+    "prop.endDate": "تاريخ الانتهاء",
+    "prop.isPerpetual": "دائم",
+    "prop.name": "الاسم",
+    "prop.organizations": "المؤسسات",
+    "prop.orgRole": "دور المؤسسة",
+    "prop.renewalPriority": "أولوية التجديد",
+    "prop.startDate": "تاريخ البدء",
+    "prop.tags": "الوسوم"
 }

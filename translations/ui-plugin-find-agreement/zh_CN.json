@@ -1,4 +1,16 @@
 {
     "selectAgreement": "选择协议",
-    "meta.title": "ERM协议查找器（插件）"
+    "meta.title": "ERM协议查找器（插件）",
+    "agreements": "Agreements",
+    "searchInputLabel": "Search Agreements",
+    "prop.agreementStatus": "Status",
+    "prop.cancellationDeadline": "Cancellation deadline",
+    "prop.endDate": "End date",
+    "prop.isPerpetual": "Is perpetual",
+    "prop.name": "Name",
+    "prop.organizations": "Organizations",
+    "prop.orgRole": "Organization role",
+    "prop.renewalPriority": "Renewal priority",
+    "prop.startDate": "Start date",
+    "prop.tags": "Tags"
 }
