@@ -85,6 +85,10 @@ export default class Container extends React.Component {
     if (this.searchField.current) {
       this.searchField.current.focus();
     }
+
+    this.props.mutator.agreementSearchParams.update({
+      filters: 'agreementStatus.Active,agreementStatus.Draft,agreementStatus.In negotiation,agreementStatus.Requested',
+    });
   }
 
   handleNeedMoreData = () => {

@@ -193,6 +193,7 @@ export default class Agreements extends React.Component {
           initialSearchState={{ query: '' }}
           queryGetter={queryGetter}
           querySetter={querySetter}
+          syncToLocationSearch={false}
         >
           {
             ({
