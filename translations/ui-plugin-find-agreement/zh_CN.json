@@ -1,16 +1,16 @@
 {
     "selectAgreement": "选择协议",
     "meta.title": "ERM协议查找器（插件）",
-    "agreements": "Agreements",
-    "searchInputLabel": "Search Agreements",
-    "prop.agreementStatus": "Status",
-    "prop.cancellationDeadline": "Cancellation deadline",
-    "prop.endDate": "End date",
-    "prop.isPerpetual": "Is perpetual",
-    "prop.name": "Name",
-    "prop.organizations": "Organizations",
-    "prop.orgRole": "Organization role",
-    "prop.renewalPriority": "Renewal priority",
-    "prop.startDate": "Start date",
-    "prop.tags": "Tags"
+    "agreements": "协议",
+    "searchInputLabel": "搜索协议",
+    "prop.agreementStatus": "状态",
+    "prop.cancellationDeadline": "取消截止日期",
+    "prop.endDate": "结束日期",
+    "prop.isPerpetual": "永久的",
+    "prop.name": "名称",
+    "prop.organizations": "组织",
+    "prop.orgRole": "组织角色",
+    "prop.renewalPriority": "续订优先权",
+    "prop.startDate": "开始日期",
+    "prop.tags": "标签"
 }
