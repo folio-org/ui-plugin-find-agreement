@@ -2,7 +2,7 @@
     "selectAgreement": "Select agreement",
     "meta.title": "ERM Agreement finder (plugin)",
     "agreements": "Agreements",
-    "searchInputLabel": "Search agreements",
+    "searchInputLabel": "Cerca accordi",
     "prop.agreementStatus": "Status",
     "prop.cancellationDeadline": "Cancellation deadline",
     "prop.endDate": "End date",
