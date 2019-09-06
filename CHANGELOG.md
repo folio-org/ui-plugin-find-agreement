@@ -1,5 +1,8 @@
 # Change history for ui-plugin-find-agreement
 
+## 3.0.1 2019-04-06
+* Added translations
+
 ## 3.0.0 2019-07-22
 * Removed dependency on ui-agreements.
 
