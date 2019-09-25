@@ -1,8 +1,8 @@
 {
-    "selectAgreement": "Select agreement",
+    "selectAgreement": "Seleziona contratto",
     "meta.title": "ERM Agreement finder (plugin)",
-    "agreements": "Agreements",
-    "searchInputLabel": "Cerca accordi",
+    "agreements": "Contratti",
+    "searchInputLabel": "Cerca contratti",
     "prop.agreementStatus": "Stato",
     "prop.cancellationDeadline": "Cancellation deadline",
     "prop.endDate": "End date",
