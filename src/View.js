@@ -68,8 +68,8 @@ export default class Agreements extends React.Component {
   columnMapping = {
     name: <FormattedMessage id="ui-plugin-find-agreement.prop.name" />,
     agreementStatus: <FormattedMessage id="ui-plugin-find-agreement.prop.agreementStatus" />,
-    startDate: <FormattedMessage id="ui-plugin-find-agreement.prop.startDate" />,
-    endDate: <FormattedMessage id="ui-plugin-find-agreement.prop.endDate" />,
+    startDate: <FormattedMessage id="ui-plugin-find-agreement.prop.periodStart" />,
+    endDate: <FormattedMessage id="ui-plugin-find-agreement.prop.periodEnd" />,
     cancellationDeadline: <FormattedMessage id="ui-plugin-find-agreement.prop.cancellationDeadline" />,
   }
 
@@ -232,11 +232,7 @@ export default class Agreements extends React.Component {
                                 marginBottom0
                                 name="query"
                                 onChange={getSearchHandlers().query}
-                                onClear={() => {
-                                  getSearchHandlers().clear();
-                                  // TODO: Add way to trigger search automatically
-                                  // onSubmitSearch();
-                                }}
+                                onClear={getSearchHandlers().reset}
                                 value={searchValue.query}
                               />
                             )}

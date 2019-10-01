@@ -8,13 +8,13 @@
 
   "prop.agreementStatus": "Status",
   "prop.cancellationDeadline": "Cancellation deadline",
-  "prop.endDate": "End date",
   "prop.isPerpetual": "Is perpetual",
   "prop.name": "Name",
   "prop.organizations": "Organizations",
   "prop.orgRole": "Organization role",
+  "prop.periodEnd": "Period start",
+  "prop.periodStart": "Period start",
   "prop.renewalPriority": "Renewal priority",
-  "prop.startDate": "Start date",
   "prop.tags": "Tags"
 
 }
