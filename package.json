@@ -45,7 +45,8 @@
         "visible": true,
         "subPermissions": [
           "erm.agreements.view",
-          "erm.orgs.view"
+          "erm.orgs.view",
+          "erm.refdata.view"
         ]
       }
     ]
