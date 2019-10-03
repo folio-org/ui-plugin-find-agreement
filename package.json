@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-agreement",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "ERM-agreement-finder for Stripes",
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
@@ -22,7 +22,7 @@
     "react-dom": "^16.6.3"
   },
   "dependencies": {
-    "@folio/stripes-erm-components": "^1.4.0",
+    "@folio/stripes-erm-components": "^1.4.0||^2.0.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.0",
     "react-intl": "^2.4.0"
@@ -34,6 +34,20 @@
   "stripes": {
     "type": "plugin",
     "pluginType": "find-agreement",
-    "displayName": "ui-plugin-find-agreement.meta.title"
+    "displayName": "ui-plugin-find-agreement.meta.title",
+    "okapiInterfaces": {
+      "erm": "1.0 2.0"
+    },
+    "permissionSets": [
+      {
+        "permissionName": "ui-plugin-find-agreement.search",
+        "displayName": "Find Agreement Plugin: Search agreements",
+        "visible": true,
+        "subPermissions": [
+          "erm.agreements.view",
+          "erm.orgs.view"
+        ]
+      }
+    ]
   }
 }

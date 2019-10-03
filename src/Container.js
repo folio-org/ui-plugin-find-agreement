@@ -31,22 +31,22 @@ export default class Container extends React.Component {
     },
     agreementStatusValues: {
       type: 'okapi',
-      path: 'erm/refdataValues/SubscriptionAgreement/agreementStatus',
+      path: 'erm/refdata/SubscriptionAgreement/agreementStatus',
       shouldRefresh: () => false,
     },
     renewalPriorityValues: {
       type: 'okapi',
-      path: 'erm/refdataValues/SubscriptionAgreement/renewalPriority',
+      path: 'erm/refdata/SubscriptionAgreement/renewalPriority',
       shouldRefresh: () => false,
     },
     isPerpetualValues: {
       type: 'okapi',
-      path: 'erm/refdataValues/SubscriptionAgreement/isPerpetual',
+      path: 'erm/refdata/SubscriptionAgreement/isPerpetual',
       shouldRefresh: () => false,
     },
     orgRoleValues: {
       type: 'okapi',
-      path: 'erm/refdataValues/SubscriptionAgreementOrg/role',
+      path: 'erm/refdata/SubscriptionAgreementOrg/role',
       shouldRefresh: () => false,
     },
     tagsValues: {

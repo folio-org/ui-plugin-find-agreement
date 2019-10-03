@@ -1,5 +1,11 @@
 # Change history for ui-plugin-find-agreement
 
+## 3.1.0 IN PROGRESS
+* Fixed clear button in search box.
+* Added support for agreement periods.
+* Added support for erm interface 2.0
+* Added permission set
+
 ## 3.0.1 2019-04-06
 * Added translations
 
