@@ -5,12 +5,12 @@
     "searchInputLabel": "Pesquisar contratos",
     "prop.agreementStatus": "Status",
     "prop.cancellationDeadline": "Prazo de cancelamento",
-    "prop.endDate": "Data final",
     "prop.isPerpetual": "É perpétuo",
     "prop.name": "Nome",
     "prop.organizations": "Organizações",
     "prop.orgRole": "Função da organização",
     "prop.renewalPriority": "Prioridade de renovação",
-    "prop.startDate": "Data de início",
-    "prop.tags": "Tags"
+    "prop.tags": "Tags",
+    "prop.periodEnd": "Period start",
+    "prop.periodStart": "Period start"
 }
