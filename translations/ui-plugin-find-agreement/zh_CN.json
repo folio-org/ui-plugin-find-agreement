@@ -11,6 +11,6 @@
     "prop.orgRole": "组织角色",
     "prop.renewalPriority": "续订优先权",
     "prop.tags": "标签",
-    "prop.periodEnd": "Period start",
-    "prop.periodStart": "Period start"
+    "prop.periodEnd": "期限开始",
+    "prop.periodStart": "期限开始"
 }
