@@ -4,7 +4,7 @@
     "agreements": "Agreements",
     "searchInputLabel": "Search agreements",
     "prop.agreementStatus": "Status",
-    "prop.cancellationDeadline": "Cancellation deadline",
+    "prop.cancellationDeadline": "キャンセル期限",
     "prop.isPerpetual": "Is perpetual",
     "prop.name": "Name",
     "prop.organizations": "Organizations",
