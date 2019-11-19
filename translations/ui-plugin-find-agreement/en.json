@@ -12,7 +12,7 @@
   "prop.name": "Name",
   "prop.organizations": "Organizations",
   "prop.orgRole": "Organization role",
-  "prop.periodEnd": "Period start",
+  "prop.periodEnd": "Period end",
   "prop.periodStart": "Period start",
   "prop.renewalPriority": "Renewal priority",
   "prop.tags": "Tags"
