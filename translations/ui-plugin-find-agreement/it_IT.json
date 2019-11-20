@@ -1,16 +1,16 @@
 {
     "selectAgreement": "Seleziona contratto",
-    "meta.title": "ERM Agreement finder (plugin)",
+    "meta.title": "Plugin ricerca accordi ERM",
     "agreements": "Contratti",
     "searchInputLabel": "Cerca contratti",
     "prop.agreementStatus": "Stato",
-    "prop.cancellationDeadline": "Cancellation deadline",
-    "prop.isPerpetual": "Is perpetual",
+    "prop.cancellationDeadline": "Termine di cancellazione",
+    "prop.isPerpetual": "È perpetuo",
     "prop.name": "Nome",
     "prop.organizations": "Organizzazioni",
-    "prop.orgRole": "Organization role",
-    "prop.renewalPriority": "Renewal priority",
+    "prop.orgRole": "Ruolo organizzativo",
+    "prop.renewalPriority": "Priorità del rinnovo",
     "prop.tags": "Tags",
-    "prop.periodEnd": "Period start",
-    "prop.periodStart": "Period start"
+    "prop.periodEnd": "Periodo di fine",
+    "prop.periodStart": "Periodo di inizio"
 }
