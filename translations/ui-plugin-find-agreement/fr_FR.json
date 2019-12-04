@@ -1,6 +1,6 @@
 {
-    "selectAgreement": "Select agreement",
-    "meta.title": "ERM Agreement finder (plugin)",
+    "selectAgreement": "Sélectionner un accord",
+    "meta.title": "Recherche d'accords ERM (plugin)",
     "agreements": "Accords",
     "searchInputLabel": "Rechercher parmi les accords",
     "prop.agreementStatus": "Statut",
