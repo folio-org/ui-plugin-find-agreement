@@ -92,19 +92,18 @@ export default class Agreements extends React.Component {
     const { rowClass, rowData, rowIndex, rowProps = {}, cells } = row;
 
     return (
-      <div
-        aria-rowindex={rowIndex + 2}
+      <button
         className={rowClass}
         data-label={[
           rowData.name,
           this.formatter.agreementStatus(rowData),
         ].join('...')}
         key={`row-${rowIndex}`}
-        role="row"
+        type="button"
         {...rowProps}
       >
         {cells}
-      </div>
+      </button>
     );
   }
 
@@ -221,7 +220,7 @@ export default class Agreements extends React.Component {
                         {/* TODO: Use forthcoming <SearchGroup> or similar component */}
                         <div className={css.searchGroupWrap}>
                           <FormattedMessage id="ui-plugin-find-agreement.searchInputLabel">
-                            { ariaLabel => (
+                            {ariaLabel => (
                               <SearchField
                                 aria-label={ariaLabel}
                                 autoFocus
@@ -295,7 +294,7 @@ export default class Agreements extends React.Component {
                       visibleColumns={visibleColumns}
                     />
                   </Pane>
-                  { children }
+                  {children}
                 </Paneset>
               );
             }
