@@ -8,13 +8,14 @@ import css from './AgreementSearch.css';
 
 export default class AgreementSearchModal extends React.Component {
   static propTypes = {
-    stripes: PropTypes.shape({
-      connect: PropTypes.func.isRequired,
-    }),
+    dataKey: PropTypes.string,
+    modalRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
     onAgreementSelected: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool,
-    dataKey: PropTypes.string,
+    stripes: PropTypes.shape({
+      connect: PropTypes.func.isRequired,
+    }),
   };
 
   static defaultProps = {
