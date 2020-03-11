@@ -129,8 +129,8 @@ export default class Filters extends React.Component {
         <Selection
           dataOptions={dataOptions}
           disabled={orgFilters.length === 0}
-          value={roleFilters[0] || ''}
           onChange={value => this.props.filterHandlers.state({ ...activeFilters, role: [value] })}
+          value={roleFilters[0] || ''}
         />
       </Accordion>
     );
@@ -146,9 +146,9 @@ export default class Filters extends React.Component {
     return (
       <Accordion
         closedByDefault
-        id="clickable-tags-filter"
         displayClearButton={activeFilters.length > 0}
         header={FilterAccordionHeader}
+        id="clickable-tags-filter"
         label={<FormattedMessage id="ui-plugin-find-agreement.prop.tags" />}
         onClearFilter={() => { this.props.filterHandlers.clearGroup('tags'); }}
         separator={false}

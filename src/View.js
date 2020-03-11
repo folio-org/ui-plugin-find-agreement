@@ -93,12 +93,12 @@ export default class Agreements extends React.Component {
 
     return (
       <button
+        key={`row-${rowIndex}`}
         className={rowClass}
         data-label={[
           rowData.name,
           this.formatter.agreementStatus(rowData),
         ].join('...')}
-        key={`row-${rowIndex}`}
         type="button"
         {...rowProps}
       >
@@ -121,9 +121,9 @@ export default class Agreements extends React.Component {
     return (
       <div data-test-agreements-no-results-message>
         <NoResultsMessage
-          source={source}
-          searchTerm={query.query || ''}
           filterPaneIsVisible
+          searchTerm={query.query || ''}
+          source={source}
           toggleFilterPane={noop}
         />
       </div>
@@ -143,10 +143,10 @@ export default class Agreements extends React.Component {
             <FormattedMessage id={hideOrShowMessageId}>
               {hideOrShowMessage => (
                 <FilterPaneToggle
-                  visible={filterPaneIsVisible}
                   aria-label={`${hideOrShowMessage}...s${appliedFiltersMessage}`}
-                  onClick={this.toggleFilterPane}
                   badge={!filterPaneIsVisible && filterCount ? filterCount : undefined}
+                  onClick={this.toggleFilterPane}
+                  visible={filterPaneIsVisible}
                 />
               )}
             </FormattedMessage>
@@ -183,13 +183,13 @@ export default class Agreements extends React.Component {
     const sortOrder = query.sort || '';
 
     return (
-      <div data-test-agreements ref={contentRef}>
+      <div ref={contentRef} data-test-agreements>
         <SearchAndSortQuery
           initialFilterState={{
             agreementStatus: ['Active', 'Draft', 'In negotiation', 'Requested']
           }}
-          initialSortState={{ sort: 'name' }}
           initialSearchState={{ query: '' }}
+          initialSortState={{ sort: 'name' }}
           queryGetter={queryGetter}
           querySetter={querySetter}
           syncToLocationSearch={false}
@@ -250,8 +250,8 @@ export default class Agreements extends React.Component {
                         <div className={css.resetButtonWrap}>
                           <Button
                             buttonStyle="none"
-                            id="clickable-reset-all"
                             disabled={disableReset()}
+                            id="clickable-reset-all"
                             onClick={resetAll}
                           >
                             <Icon icon="times-circle-solid">
@@ -272,8 +272,8 @@ export default class Agreements extends React.Component {
                     defaultWidth="fill"
                     firstMenu={this.renderResultsFirstMenu(activeFilters)}
                     padContent={false}
-                    paneTitle={<FormattedMessage id="ui-plugin-find-agreement.agreements" />}
                     paneSub={this.renderResultsPaneSubtitle(source)}
+                    paneTitle={<FormattedMessage id="ui-plugin-find-agreement.agreements" />}
                   >
                     <MultiColumnList
                       autosize
