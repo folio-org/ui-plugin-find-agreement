@@ -1,5 +1,6 @@
 {
-  "meta.title": "ERM Agreement finder (plugin)",
+  "meta.title": "Agreement Finder Plugin",
+  "permission.search": "Find Agreement Plugin: Search agreements",
 
   "selectAgreement": "Select agreement",
 
