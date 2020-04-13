@@ -1,16 +1,17 @@
 {
     "selectAgreement": "Select agreement",
-    "meta.title": "ERM Agreement finder (plugin)",
-    "agreements": "Agreements",
+    "meta.title": "契約ファインダープラグイン",
+    "agreements": "契約",
     "searchInputLabel": "Search agreements",
     "prop.agreementStatus": "Status",
     "prop.cancellationDeadline": "キャンセル期限",
     "prop.isPerpetual": "Is perpetual",
     "prop.name": "Name",
-    "prop.organizations": "Organizations",
+    "prop.organizations": "組織",
     "prop.orgRole": "Organization role",
     "prop.renewalPriority": "Renewal priority",
-    "prop.tags": "Tags",
+    "prop.tags": "タグ",
     "prop.periodEnd": "Period end",
-    "prop.periodStart": "Period start"
+    "prop.periodStart": "Period start",
+    "permission.search": "Find Agreement Plugin: Search agreements"
 }

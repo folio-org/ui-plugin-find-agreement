@@ -1,6 +1,6 @@
 {
     "selectAgreement": "Selecione o contrato",
-    "meta.title": "Localizador de contrato ERM (plugin)",
+    "meta.title": "Plugin localizador de contratos",
     "agreements": "Contratos",
     "searchInputLabel": "Pesquisar contratos",
     "prop.agreementStatus": "Status",
@@ -12,5 +12,6 @@
     "prop.renewalPriority": "Prioridade de renovação",
     "prop.tags": "Tags",
     "prop.periodEnd": "Fim do período",
-    "prop.periodStart": "Início do período"
+    "prop.periodStart": "Início do período",
+    "permission.search": "Find Agreement Plugin: Search agreements"
 }

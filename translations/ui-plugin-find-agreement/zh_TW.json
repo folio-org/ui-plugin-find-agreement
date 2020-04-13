@@ -12,5 +12,6 @@
     "prop.renewalPriority": "续订优先权",
     "prop.tags": "标签",
     "prop.periodEnd": "Period end",
-    "prop.periodStart": "Period start"
+    "prop.periodStart": "Period start",
+    "permission.search": "Find Agreement Plugin: Search agreements"
 }
