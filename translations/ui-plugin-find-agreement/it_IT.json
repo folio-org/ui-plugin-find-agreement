@@ -12,5 +12,6 @@
     "prop.renewalPriority": "Priorità del rinnovo",
     "prop.tags": "Tags",
     "prop.periodEnd": "Periodo di fine",
-    "prop.periodStart": "Periodo di inizio"
+    "prop.periodStart": "Periodo di inizio",
+    "permission.search": "Find Agreement Plugin: Search agreements"
 }

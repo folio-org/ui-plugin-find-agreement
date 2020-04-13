@@ -1,6 +1,6 @@
 {
     "selectAgreement": "Select agreement",
-    "meta.title": "ERM Agreement finder (plugin)",
+    "meta.title": "Agreement Finder Plugin",
     "agreements": "Agreements",
     "searchInputLabel": "Buscar acuerdos",
     "prop.agreementStatus": "Status",
@@ -12,5 +12,6 @@
     "prop.renewalPriority": "Renewal priority",
     "prop.tags": "Tags",
     "prop.periodEnd": "Fin del período",
-    "prop.periodStart": "Inicio del período"
+    "prop.periodStart": "Inicio del período",
+    "permission.search": "Find Agreement Plugin: Search agreements"
 }

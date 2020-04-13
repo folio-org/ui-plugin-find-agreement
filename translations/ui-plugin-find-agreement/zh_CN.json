@@ -1,6 +1,6 @@
 {
     "selectAgreement": "选择协议",
-    "meta.title": "ERM协议查找器（插件）",
+    "meta.title": "协议查找器插件",
     "agreements": "协议",
     "searchInputLabel": "搜索协议",
     "prop.agreementStatus": "状态",
@@ -12,5 +12,6 @@
     "prop.renewalPriority": "续订优先权",
     "prop.tags": "标签",
     "prop.periodEnd": "期限结束",
-    "prop.periodStart": "期限开始"
+    "prop.periodStart": "期限开始",
+    "permission.search": "查找协议插件：搜索协议"
 }
