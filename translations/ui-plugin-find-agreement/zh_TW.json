@@ -1,9 +1,9 @@
 {
     "selectAgreement": "选择协议",
     "meta.title": "ERM协议查找器（插件）",
-    "agreements": "协议",
-    "searchInputLabel": "搜索协议",
-    "prop.agreementStatus": "状态",
+    "agreements": "授權許可",
+    "searchInputLabel": "查詢授權許可",
+    "prop.agreementStatus": "狀態",
     "prop.cancellationDeadline": "取消截止日期",
     "prop.isPerpetual": "永久的",
     "prop.name": "名称",
