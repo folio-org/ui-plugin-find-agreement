@@ -40,6 +40,9 @@
     "okapiInterfaces": {
       "erm": "1.0 2.0"
     },
+    "stripesDeps": [
+      "@folio/stripes-erm-components"
+    ],
     "permissionSets": [
       {
         "permissionName": "ui-plugin-find-agreement.search",
