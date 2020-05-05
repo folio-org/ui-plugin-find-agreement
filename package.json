@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-agreement",
-  "version": "3.2.0",
+  "version": "4.0.0",
   "description": "ERM-agreement-finder for Stripes",
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
@@ -15,12 +15,12 @@
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^5.2.0",
-    "@folio/stripes": "^3.0.0",
+    "@folio/stripes": "^4.0.0",
     "babel-eslint": "^9.0.0",
     "eslint": "^6.2.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-intl": "^2.4.0"
+    "react-intl": "^4.5.1"
   },
   "dependencies": {
     "@folio/stripes-erm-components": "^1.4.0||^2.0.0",
@@ -29,9 +29,9 @@
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
-    "@folio/stripes": "^3.0.0",
+    "@folio/stripes": "^4.0.0",
     "react": "*",
-    "react-intl": "^2.4.0"
+    "react-intl": "^4.5.1"
   },
   "stripes": {
     "type": "plugin",
