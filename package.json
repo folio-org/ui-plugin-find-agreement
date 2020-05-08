@@ -34,7 +34,9 @@
     "react-intl": "^4.5.1"
   },
   "stripes": {
-    "type": "plugin",
+    "actsAs": [
+      "plugin"
+    ],
     "pluginType": "find-agreement",
     "displayName": "ui-plugin-find-agreement.meta.title",
     "okapiInterfaces": {
