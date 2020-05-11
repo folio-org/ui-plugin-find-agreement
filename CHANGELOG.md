@@ -1,5 +1,9 @@
 # Change history for ui-plugin-find-agreement
 
+## 4.0.0 IN PROGRESS
+* Upgrade to Stripes 4.0
+* Added translations
+
 ## 3.2.0 2020-03-11
 * Accessibility fixes
 * Added translations
