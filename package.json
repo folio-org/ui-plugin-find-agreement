@@ -40,7 +40,7 @@
     "pluginType": "find-agreement",
     "displayName": "ui-plugin-find-agreement.meta.title",
     "okapiInterfaces": {
-      "erm": "1.0 2.0"
+      "erm": "1.0 2.0 3.0"
     },
     "stripesDeps": [
       "@folio/stripes-erm-components"
