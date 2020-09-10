@@ -20,7 +20,7 @@
     "eslint": "^6.2.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-intl": "^4.5.1"
+    "react-intl": "^5.8.1"
   },
   "dependencies": {
     "@folio/stripes-erm-components": "^4.0.0",
@@ -31,7 +31,7 @@
   "peerDependencies": {
     "@folio/stripes": "^5.0.0",
     "react": "*",
-    "react-intl": "^4.5.1"
+    "react-intl": "^5.8.1"
   },
   "stripes": {
     "actsAs": [
