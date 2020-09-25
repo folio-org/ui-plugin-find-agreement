@@ -84,6 +84,7 @@ export default class Filters extends React.Component {
         closedByDefault
         displayClearButton={orgFilters.length > 0}
         header={FilterAccordionHeader}
+        id="organizations-filter"
         label={<FormattedMessage id="ui-plugin-find-agreement.prop.organizations" />}
         onClearFilter={() => {
           this.props.filterHandlers.state({
@@ -122,6 +123,7 @@ export default class Filters extends React.Component {
         closedByDefault
         displayClearButton={roleFilters.length > 0}
         header={FilterAccordionHeader}
+        id="organization-role-filter"
         label={<FormattedMessage id="ui-plugin-find-agreement.prop.orgRole" />}
         onClearFilter={() => { this.props.filterHandlers.clearGroup('role'); }}
         separator={false}
