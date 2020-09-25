@@ -12,7 +12,7 @@ class PluginHarness extends React.Component {
         dataKey="agreements"
         id="clickable-find-agreement"
         marginTop0
-        onAgreementSelected={noop}
+        onAgreementSelected={this.props.onAgreementSelected}
         renderTrigger={(props) => {
           const buttonProps = {
             'aria-haspopup': 'true',

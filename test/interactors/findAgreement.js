@@ -26,10 +26,17 @@ import css from '../../src/AgreementSearch.css';
   isTagsFilterPresent = isPresent('#accordion-toggle-button-clickable-tags-filter');
   isSupplementaryPropertiesFilterPresent = isPresent('#accordion-toggle-button-clickable-custprop-filter');
 
-  clickPackagesFilter = clickable('#clickable-filter-class-package');
-  clickNonPackagesFilter = clickable('#clickable-filter-class-nopackage');
-  clickJournalFilter = clickable('#clickable-filter-type-journal');
-  clickBookFilter = clickable('#clickable-filter-type-book');
+  clickClosedFilter = clickable('#clickable-filter-agreementStatus-closed');
+  clickDraftFilter = clickable('#clickable-filter-agreementStatus-draft');
+  clickRequestedFilter = clickable('#clickable-filter-agreementStatus-requested');
+  clickInNegotiationFilter = clickable('#clickable-filter-agreementStatus-in-negotiation');
+  clickActiveFilter = clickable('#clickable-filter-agreementStatus-active');
+
+  clickDefinitelyRenewFilter = clickable('#clickable-filter-renewalPriority-definitely-renew');
+  clickForReviewFilter = clickable('#clickable-filter-renewalPriority-for-review');
+  clickDefinitelyCancelFilter = clickable('#clickable-filter-renewalPriority-definitely-cancel');
+  clickisPerpetualYesFilter = clickable('#clickable-filter-isPerpetual-yes');
+  clickisPerpetualNoFilter = clickable('#clickable-filter-isPerpetual-no');
 
   instances = collection('[role="rowgroup"] [role="row"]', {
     click: clickable('[role=gridcell]'),
@@ -40,23 +47,27 @@ import css from '../../src/AgreementSearch.css';
     click: clickable()
   });
 
-  searchField = scoped('[data-test-eresource-search-input]', SearchField);
-  searchButton = scoped('#clickable-search-eresources', {
+  searchField = scoped('[data-test-agreement-search-input]', SearchField);
+  searchButton = scoped('#clickable-search-agreements', {
     click: clickable(),
     isEnabled: is(':not([disabled])'),
   });
 }
 
-@interactor class FindEresourceInteractor {
+@interactor class FindAgreementInteractor {
   button = scoped('[data-test-plugin-agreement-button]', {
     click: clickable(),
   });
 
-  closeButton = scoped('#plugin-find-eresource-modal-close-button', {
+  closeButton = scoped('#plugin-find-agreement-modal-close-button', {
+    click: clickable(),
+  });
+
+  clearButton = scoped('[data-test-clear-button]', {
     click: clickable(),
   });
 
   modal = new PluginModalInteractor(`.${css.modalContent}`);
 }
 
-export default FindEresourceInteractor;
+export default FindAgreementInteractor;

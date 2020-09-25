@@ -6,6 +6,7 @@ const getItems = (schema, request, recordName) => {
   const queryString = request.url.split('?')[1];
   const params = parseQueryString(queryString);
   let { filters } = params;
+
   // when there is only one filter and its not an array
   if (filters && !isEmpty(filters) && !Array.isArray(filters)) filters = [filters];
 
