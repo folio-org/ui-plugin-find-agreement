@@ -1,6 +1,6 @@
 {
     "selectAgreement": "اختر اتفاقية",
-    "meta.title": "باحث اتفاقية إدارة الموارد الإلكترونية (برنامج مساعد)",
+    "meta.title": "برنامج باحث الاتفاقية المساعد",
     "agreements": "اتفاقيات",
     "searchInputLabel": "بحث الاتفاقيات",
     "prop.agreementStatus": "الحالة",
@@ -11,7 +11,7 @@
     "prop.orgRole": "دور المؤسسة",
     "prop.renewalPriority": "أولوية التجديد",
     "prop.tags": "الوسوم",
-    "prop.periodEnd": "بدء الفترة",
+    "prop.periodEnd": "انتهاء الفترة",
     "prop.periodStart": "بدء الفترة",
     "permission.search": "برنامج باحث الإتفاقية المساعد: ابحث الإتفاقيات"
 }
