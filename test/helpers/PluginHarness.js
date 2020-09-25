@@ -1,10 +1,14 @@
 import React from 'react';
-import noop from 'lodash/noop';
 import { Pluggable } from '@folio/stripes/core';
 import { Button } from '@folio/stripes/components';
 import { FormattedMessage } from 'react-intl';
+import PropTypes from 'prop-types';
 
 class PluginHarness extends React.Component {
+  static propTypes = {
+    onAgreementSelected: PropTypes.func,
+  }
+
   render() {
     return (
       <Pluggable
