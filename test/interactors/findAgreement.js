@@ -6,6 +6,7 @@ import {
   fillable,
   is,
   isPresent,
+  text
 } from '@bigtest/interactor';
 
 import css from '../../src/AgreementSearch.css';
@@ -40,6 +41,9 @@ import css from '../../src/AgreementSearch.css';
 
   instances = collection('[role="rowgroup"] [role="row"]', {
     click: clickable('[role=gridcell]'),
+    startDate: text('[data-test-start-date]'),
+    endDate: text('[data-test-end-date]'),
+    cancellationDeadline: text('[data-test-cancellation-deadline]'),
   });
 
   resetButton = scoped('#clickable-reset-all', {

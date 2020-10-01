@@ -84,9 +84,9 @@ export default class Agreements extends React.Component {
 
   formatter = {
     agreementStatus: a => a?.agreementStatus?.label,
-    startDate: a => (a.startDate ? <FormattedUTCDate value={a.startDate} /> : ''),
-    endDate: a => (a.endDate ? <FormattedUTCDate value={a.endDate} /> : ''),
-    cancellationDeadline: a => (a.cancellationDeadline ? <FormattedUTCDate value={a.cancellationDeadline} /> : ''),
+    startDate: a => <div data-test-start-date>{(a.startDate ? <FormattedUTCDate value={a.startDate} /> : '')}</div>,
+    endDate: a => <div data-test-end-date>{(a.endDate ? <FormattedUTCDate value={a.endDate} /> : '')}</div>,
+    cancellationDeadline: a => <div data-test-cancellation-deadline>{(a.cancellationDeadline ? <FormattedUTCDate value={a.cancellationDeadline} /> : '')}</div>,
   }
 
   rowFormatter = (row) => {
