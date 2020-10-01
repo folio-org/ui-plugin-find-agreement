@@ -19,7 +19,10 @@ const activeStatus = {
     id: faker.random.uuid(),
     label: 'Active',
     value: 'active'
-  }
+  },
+  startDate: '2020-10-09',
+  endDate: '2020-10-31',
+  cancellationDeadline: '2020-10-23'
 };
 
 const draftStatusAgreementsCount = 3;
@@ -250,6 +253,18 @@ describe('UI-plugin-find-agreement', function () {
 
           it('renders the expected number of agreements', function () {
             expect(findAgreement.modal.instances().length).to.equal(activeStatusAgreementsCount);
+          });
+
+          it('renders the expected start date', function () {
+            expect(findAgreement.modal.instances(0).startDate).to.equal('10/9/2020');
+          });
+
+          it('renders the expected end date', function () {
+            expect(findAgreement.modal.instances(0).endDate).to.equal('10/31/2020');
+          });
+
+          it('renders the expected cancellation deadline', function () {
+            expect(findAgreement.modal.instances(0).cancellationDeadline).to.equal('10/23/2020');
           });
         });
 
