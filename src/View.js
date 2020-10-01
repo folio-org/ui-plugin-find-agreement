@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { get, noop } from 'lodash';
-import { FormattedDate, FormattedMessage } from 'react-intl';
+import { noop } from 'lodash';
+import { FormattedMessage } from 'react-intl';
 
 import {
+  FormattedUTCDate,
   MultiColumnList,
   SearchField,
   Pane,
@@ -82,10 +83,10 @@ export default class Agreements extends React.Component {
   }
 
   formatter = {
-    agreementStatus: a => get(a, 'agreementStatus.label'),
-    startDate: a => a.startDate && <FormattedDate value={a.startDate} />,
-    endDate: a => a.endDate && <FormattedDate value={a.endDate} />,
-    cancellationDeadline: a => a.cancellationDeadline && <FormattedDate value={a.cancellationDeadline} />,
+    agreementStatus: a => a?.agreementStatus?.label,
+    startDate: a => (a.startDate ? <FormattedUTCDate value={a.startDate} /> : ''),
+    endDate: a => (a.endDate ? <FormattedUTCDate value={a.endDate} /> : ''),
+    cancellationDeadline: a => (a.cancellationDeadline ? <FormattedUTCDate value={a.cancellationDeadline} /> : ''),
   }
 
   rowFormatter = (row) => {
