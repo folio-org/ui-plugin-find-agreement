@@ -30,12 +30,7 @@ export default class Agreements extends React.Component {
     children: PropTypes.object,
     contentRef: PropTypes.object,
     data: PropTypes.shape({
-      agreements: PropTypes.array.isRequired,
-      agreementStatusValues: PropTypes.array.isRequired,
-      renewalPriorityValues: PropTypes.array.isRequired,
-      isPerpetualValues: PropTypes.array.isRequired,
-      orgRoleValues: PropTypes.array.isRequired,
-      tagsValues: PropTypes.array.isRequired,
+      agreements: PropTypes.arrayOf(PropTypes.object).isRequired,
     }),
     disableRecordCreation: PropTypes.bool,
     onNeedMoreData: PropTypes.func.isRequired,
