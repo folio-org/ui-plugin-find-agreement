@@ -2,8 +2,8 @@
 
 ## 5.0.0 2020-10-15
 * Upgrade to Stripes 5.0
-* Added tests for the plugin, ERM-1111
-* Fixed issue with date display, ERM-1153
+* Added tests for the plugin. ERM-1111
+* Fixed issue with date display. ERM-1153
 
 ## 4.0.0 2020-06-10
 * Upgrade to Stripes 4.0
