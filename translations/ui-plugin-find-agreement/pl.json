@@ -10,7 +10,7 @@
     "prop.organizations": "Organizations",
     "prop.orgRole": "Organization role",
     "prop.renewalPriority": "Renewal priority",
-    "prop.tags": "Tags",
+    "prop.tags": "Etykiety",
     "prop.periodEnd": "Period end",
     "prop.periodStart": "Period start",
     "permission.search": "Find Agreement Plugin: Search agreements"
