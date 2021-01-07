@@ -1,5 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
+## 6.0.0 IN PROGRESS
+* Upgrade to Stripes 6.0
 ## 5.0.0 2020-10-15
 * Upgrade to Stripes 5.0
 * Added tests for the plugin. ERM-1111
