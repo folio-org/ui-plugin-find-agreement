@@ -205,7 +205,10 @@ export default class Agreements extends React.Component {
               const disableReset = () => (!filterChanged && !searchChanged);
 
               return (
-                <Paneset id="agreements-paneset">
+                <Paneset
+                  id="agreements-paneset"
+                  isRoot
+                >
                   {this.state.filterPaneIsVisible &&
                     <Pane
                       defaultWidth="20%"
