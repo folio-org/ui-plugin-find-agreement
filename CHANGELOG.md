@@ -4,6 +4,7 @@
 * Upgrade to Stripes 6.0
 * Fixed issue with changing width. STCOM-749
 * Bumped okapiInterface dep to erm 4.0
+* Added devDep to stripes-cli
 
 ## 5.0.0 2020-10-15
 * Upgrade to Stripes 5.0
