@@ -11,7 +11,7 @@
     "prop.orgRole": "Organization role",
     "prop.renewalPriority": "Renewal priority",
     "prop.tags": "Tags",
-    "prop.periodEnd": "Period end",
-    "prop.periodStart": "Period start",
+    "prop.periodEnd": "Ende des Zeitraums",
+    "prop.periodStart": "Beginn des Zeitraums",
     "permission.search": "Find Agreement Plugin: Search agreements"
 }
