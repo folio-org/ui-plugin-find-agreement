@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-agreement
 
-## 6.0.0 IN PROGRESS
+## 6.0.0 2021-03-18
 * Upgrade to Stripes 6.0
 * Fixed issue with changing width. STCOM-749
 * Bumped okapiInterface dep to erm 4.0
