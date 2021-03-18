@@ -1,5 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
+## 6.1.0 In progress
+
 ## 6.0.0 2021-03-18
 * Upgrade to Stripes 6.0
 * Fixed issue with changing width. STCOM-749
