@@ -1,6 +1,6 @@
 {
     "selectAgreement": "选择协议",
-    "meta.title": "ERM协议查找器（插件）",
+    "meta.title": "ERM協議查詢器（插件）",
     "agreements": "授權許可",
     "searchInputLabel": "查詢授權許可",
     "prop.agreementStatus": "狀態",
