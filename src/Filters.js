@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
 import { Accordion, AccordionSet, FilterAccordionHeader, Selection } from '@folio/stripes/components';
 import { CheckboxFilter, MultiSelectionFilter } from '@folio/stripes/smart-components';
 import { OrganizationSelection } from '@folio/stripes-erm-components';
+
+const propTypes = {
+  activeFilters: PropTypes.object,
+  data: PropTypes.object.isRequired,
+  filterHandlers: PropTypes.object,
+};
 
 const FILTERS = [
   'agreementStatus',
@@ -13,41 +19,40 @@ const FILTERS = [
   'tags'
 ];
 
-export default class Filters extends React.Component {
-  static propTypes = {
-    activeFilters: PropTypes.object,
-    data: PropTypes.object.isRequired,
-    filterHandlers: PropTypes.object,
-  };
+export default function AgreementFilters({ activeFilters, data, filterHandlers }) {
+  // const intl = useIntl();
 
-  static defaultProps = {
-    activeFilters: {}
-  };
-
-  state = {
+  const [filterState, setFilterState] = useState({
     agreementStatus: [],
     renewalPriority: [],
     isPerpetual: [],
-    tags: [],
-  }
+    tags: []
+  });
 
-  static getDerivedStateFromProps(props, state) {
+  // const defaultProps = {
+  //   activeFilters: {}
+  // };
+
+  useEffect(() => {
     const newState = {};
-
     FILTERS.forEach(filter => {
-      const values = props.data[`${filter}Values`] || [];
-      if (values.length !== state[filter].length) {
-        newState[filter] = values.map(({ label }) => ({ label, value: label }));
+      const values = data[`${filter}Values`];
+      if (values.length !== filterState[filter]?.length) {
+        newState[filter] = values;
       }
     });
 
-    if (Object.keys(newState).length) return newState;
+    if ((data?.tagsValues?.length ?? 0) !== filterState.tags?.length) {
+      newState.tags = data.tagsValues.map(({ label }) => ({ value: label, label }));
+    }
 
-    return null;
-  }
+    if (Object.keys(newState).length) {
+      setFilterState(prevState => ({ ...prevState, ...newState }));
+    }
+  }, [data, filterState]);
 
-  renderCheckboxFilter = (name, props) => {
-    const { activeFilters } = this.props;
+  const renderCheckboxFilter = (name, props) => {
+    // const { activeFilters } = this.props;
     const groupFilters = activeFilters[name] || [];
 
     return (
@@ -56,15 +61,15 @@ export default class Filters extends React.Component {
         header={FilterAccordionHeader}
         id={`filter-accordion-${name}`}
         label={<FormattedMessage id={`ui-plugin-find-agreement.prop.${name}`} />}
-        onClearFilter={() => { this.props.filterHandlers.clearGroup(name); }}
+        onClearFilter={() => { filterHandlers.clearGroup(name); }}
         separator={false}
         {...props}
       >
         <CheckboxFilter
-          dataOptions={this.state[name]}
+          dataOptions={filterState[name]}
           name={name}
           onChange={(group) => {
-            this.props.filterHandlers.state({
+            filterHandlers.state({
               ...activeFilters,
               [group.name]: group.values
             });
@@ -73,10 +78,10 @@ export default class Filters extends React.Component {
         />
       </Accordion>
     );
-  }
+  };
 
-  renderOrganizationFilter = () => {
-    const { activeFilters } = this.props;
+  const renderOrganizationFilter = () => {
+    // const { activeFilters } = props;
     const orgFilters = activeFilters.orgs || [];
 
     return (
@@ -87,7 +92,7 @@ export default class Filters extends React.Component {
         id="organizations-filter"
         label={<FormattedMessage id="ui-plugin-find-agreement.prop.organizations" />}
         onClearFilter={() => {
-          this.props.filterHandlers.state({
+          filterHandlers.state({
             ...activeFilters,
             role: [],
             orgs: [],
@@ -98,23 +103,23 @@ export default class Filters extends React.Component {
         <OrganizationSelection
           input={{
             name: 'agreement-orgs-filter',
-            onChange: value => this.props.filterHandlers.state({ ...activeFilters, orgs: [value] }),
+            onChange: value => filterHandlers.state({ ...activeFilters, orgs: [value] }),
             value: orgFilters[0] || '',
           }}
         />
       </Accordion>
     );
-  }
+  };
 
-  renderOrganizationRoleFilter = () => {
-    const roles = this.props.data.orgRoleValues;
+  const renderOrganizationRoleFilter = () => {
+    const roles = data.orgRoleValues;
     // TODO: TEST USING THE VALUES GENERATED IN GDSFP
     const dataOptions = roles.map(role => ({
       value: role.id,
       label: role.label,
     }));
 
-    const { activeFilters } = this.props;
+    // const { activeFilters } = props;
     const orgFilters = activeFilters.orgs || [];
     const roleFilters = activeFilters.role || [];
 
@@ -125,24 +130,24 @@ export default class Filters extends React.Component {
         header={FilterAccordionHeader}
         id="organization-role-filter"
         label={<FormattedMessage id="ui-plugin-find-agreement.prop.orgRole" />}
-        onClearFilter={() => { this.props.filterHandlers.clearGroup('role'); }}
+        onClearFilter={() => { filterHandlers.clearGroup('role'); }}
         separator={false}
       >
         <Selection
           dataOptions={dataOptions}
           disabled={orgFilters.length === 0}
-          onChange={value => this.props.filterHandlers.state({ ...activeFilters, role: [value] })}
+          onChange={value => filterHandlers.state({ ...activeFilters, role: [value] })}
           value={roleFilters[0] || ''}
         />
       </Accordion>
     );
-  }
+  };
 
-  renderTagsFilter = () => {
+  const renderTagsFilter = () => {
     // const tags = get(this.props.data, 'tagValues.records', []);
     // TODO: TEST USING THE VALUES GENERATED IN GDSFP
     // const dataOptions = tags.map(({ label }) => ({ value: label, label }));
-    const { activeFilters } = this.props;
+    // const { activeFilters } = props;
     const tagFilters = activeFilters.tags || [];
 
     return (
@@ -152,30 +157,39 @@ export default class Filters extends React.Component {
         header={FilterAccordionHeader}
         id="clickable-tags-filter"
         label={<FormattedMessage id="ui-plugin-find-agreement.prop.tags" />}
-        onClearFilter={() => { this.props.filterHandlers.clearGroup('tags'); }}
+        onClearFilter={() => { filterHandlers.clearGroup('tags'); }}
         separator={false}
       >
         <MultiSelectionFilter
-          dataOptions={this.state.tags}
+          dataOptions={filterState.tags}
           id="tags-filter"
           name="tags"
-          onChange={e => this.props.filterHandlers.state({ ...activeFilters, tags: e.values })}
+          onChange={e => filterHandlers.state({ ...activeFilters, tags: e.values })}
           selectedValues={tagFilters}
         />
       </Accordion>
     );
-  }
+  };
 
-  render() {
-    return (
-      <AccordionSet>
-        {this.renderCheckboxFilter('agreementStatus')}
-        {this.renderCheckboxFilter('renewalPriority', { closedByDefault: true })}
-        {this.renderCheckboxFilter('isPerpetual', { closedByDefault: true })}
-        {this.renderOrganizationFilter()}
-        {this.renderOrganizationRoleFilter()}
-        {this.renderTagsFilter()}
-      </AccordionSet>
-    );
-  }
+  return (
+    <AccordionSet>
+      {renderCheckboxFilter('agreementStatus')}
+      {renderCheckboxFilter('renewalPriority', { closedByDefault: true })}
+      {renderCheckboxFilter('isPerpetual', { closedByDefault: true })}
+      {/* {renderStartDateFilter()} */}
+      {/* {this.renderEndDateFilter()} */}
+      {renderOrganizationFilter()}
+      {renderOrganizationRoleFilter()}
+      {/* {this.renderInternalContactFilter()} */}
+      {/* {this.renderInternalContactRoleFilter()} */}
+      {renderTagsFilter()}
+      {/* {this.renderCustomPropertyFilters()} */}
+    </AccordionSet>
+  );
 }
+AgreementFilters.propTypes = propTypes;
+AgreementFilters.defaultProps = {
+  activeFilters: {}
+};
+
+
