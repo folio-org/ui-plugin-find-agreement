@@ -92,7 +92,6 @@ export default class Filters extends React.Component {
       activeFilters={activeFilters}
       filterHandlers={this.props.filterHandlers}
       name="endDate"
-      // resourceName={intl.formatMessage({ id: 'ui-agreements.agreements' }).toLowerCase()}
     />;
   }
 
