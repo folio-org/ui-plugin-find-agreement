@@ -20,14 +20,22 @@ export default class Container extends React.Component {
       perRequest: 100,
       limitParam: 'perPage',
       params: getSASParams({
-        searchKey: 'name',
+        searchKey: 'name,alternateNames.name,description',
         filterKeys: {
+          agreementStatus: 'agreementStatus.value',
+          contactRole: 'contacts.role',
+          contacts: 'contacts.user',
           orgs: 'orgs.org',
           role: 'orgs.role',
           tags: 'tags.value',
         },
         queryGetter: r => r.agreementSearchParams,
       }),
+    },
+    contactRoleValues: {
+      type: 'okapi',
+      path: 'erm/refdata/InternalContact/role',
+      shouldRefresh: () => false,
     },
     agreementStatusValues: {
       type: 'okapi',
@@ -48,6 +56,11 @@ export default class Container extends React.Component {
       type: 'okapi',
       path: 'erm/refdata/SubscriptionAgreementOrg/role',
       shouldRefresh: () => false,
+    },
+    supplementaryProperties: {
+      type: 'okapi',
+      path: 'erm/custprops',
+      shouldRefresh:  () => false,
     },
     tagsValues: {
       type: 'okapi',
@@ -124,7 +137,9 @@ export default class Container extends React.Component {
           renewalPriorityValues: get(resources, 'renewalPriorityValues.records', []),
           isPerpetualValues: get(resources, 'isPerpetualValues.records', []),
           orgRoleValues: get(resources, 'orgRoleValues.records', []),
+          contactRoleValues: get(resources, 'contactRoleValues.records', []),
           tagsValues: get(resources, 'tagsValues.records', []),
+          supplementaryProperties: resources?.supplementaryProperties?.records ?? []
         }}
         onNeedMoreData={this.handleNeedMoreData}
         onSelectRow={onSelectRow}

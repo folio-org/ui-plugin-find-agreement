@@ -1,12 +1,9 @@
 {
   "meta.title": "Agreement Finder Plugin",
   "permission.search": "Find Agreement Plugin: Search agreements",
-
   "selectAgreement": "Select agreement",
-
   "agreements": "Agreements",
   "searchInputLabel": "Search agreements",
-
   "prop.agreementStatus": "Status",
   "prop.cancellationDeadline": "Cancellation deadline",
   "prop.isPerpetual": "Is perpetual",
@@ -16,6 +13,9 @@
   "prop.periodEnd": "Period end",
   "prop.periodStart": "Period start",
   "prop.renewalPriority": "Renewal priority",
-  "prop.tags": "Tags"
-
+  "prop.tags": "Tags",
+  "agreements.startDate": "Start date",
+  "agreements.endDate": "End date",
+  "internalContactsRole": "Internal contact role",
+  "internalContacts": "Internal contacts"
 }
