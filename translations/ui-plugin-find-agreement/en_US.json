@@ -1,6 +1,7 @@
 {
-    "selectAgreement": "Select agreement",
     "meta.title": "Agreement Finder Plugin",
+    "permission.search": "Find Agreement Plugin: Search agreements",
+    "selectAgreement": "Select agreement",
     "agreements": "Agreements",
     "searchInputLabel": "Search agreements",
     "prop.agreementStatus": "Status",
@@ -9,11 +10,12 @@
     "prop.name": "Name",
     "prop.organizations": "Organizations",
     "prop.orgRole": "Organization role",
+    "prop.periodStart": "Period start",
+    "prop.periodEnd": "Period end",
     "prop.renewalPriority": "Renewal priority",
     "prop.tags": "Tags",
-    "prop.periodEnd": "Period end",
-    "prop.periodStart": "Period start",
-    "permission.search": "Find Agreement Plugin: Search agreements",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
     "agreements.internalContacts": "Internal contacts",
     "agreements.internalContactsRole": "Internal contact role"
 }
