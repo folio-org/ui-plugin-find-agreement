@@ -29,6 +29,9 @@ export default class Container extends React.Component {
           role: 'orgs.role',
           tags: 'tags.value',
         },
+        sortKeys: {
+          agreementStatus: 'agreementStatus.label',
+        },
         queryGetter: r => r.agreementSearchParams,
       }),
     },
