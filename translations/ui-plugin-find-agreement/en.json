@@ -16,6 +16,6 @@
   "prop.tags": "Tags",
   "agreements.startDate": "Start date",
   "agreements.endDate": "End date",
-  "internalContactsRole": "Internal contact role",
-  "internalContacts": "Internal contacts"
+  "agreements.internalContacts": "Internal contacts",
+  "agreements.internalContactsRole": "Internal contact role"
 }

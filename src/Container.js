@@ -9,6 +9,7 @@ import View from './View';
 
 const INITIAL_RESULT_COUNT = 100;
 const RESULT_COUNT_INCREMENT = 100;
+const RECORDS_PER_REQUEST = 100;
 
 export default class Container extends React.Component {
   static manifest = Object.freeze({
@@ -25,8 +26,9 @@ export default class Container extends React.Component {
           agreementStatus: 'agreementStatus.value',
           contactRole: 'contacts.role',
           contacts: 'contacts.user',
+          isPerpetual: 'isPerpetual.value',
           orgs: 'orgs.org',
-          role: 'orgs.role',
+          role: 'orgs.roles.role',
           tags: 'tags.value',
         },
         sortKeys: {
@@ -38,6 +40,8 @@ export default class Container extends React.Component {
     contactRoleValues: {
       type: 'okapi',
       path: 'erm/refdata/InternalContact/role',
+      limitParam: 'perPage',
+      perRequest: RECORDS_PER_REQUEST,
       shouldRefresh: () => false,
     },
     agreementStatusValues: {
