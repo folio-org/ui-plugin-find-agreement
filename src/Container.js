@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
 import { StripesConnectedSource } from '@folio/stripes/smart-components';
-import { getSASParams } from '@folio/stripes-erm-components';
+import { getSASParams, preventResourceRefresh } from '@folio/stripes-erm-components';
 
 import View from './View';
 
@@ -67,7 +67,7 @@ export default class Container extends React.Component {
     supplementaryProperties: {
       type: 'okapi',
       path: 'erm/custprops',
-      shouldRefresh:  () => false,
+      shouldRefresh: preventResourceRefresh({ 'agreement': ['DELETE'] }),
     },
     tagsValues: {
       type: 'okapi',
