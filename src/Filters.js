@@ -178,7 +178,7 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
         displayClearButton={contactRoleFilters.length > 0}
         header={FilterAccordionHeader}
         id="internal-contacts-role-filter"
-        label={<FormattedMessage id="ui-agreements.agreements.internalContactsRole" />}
+        label={<FormattedMessage id="ui-plugin-find-agreement.agreements.internalContactsRole" />}
         onClearFilter={() => { filterHandlers.clearGroup('contactRole'); }}
         separator={false}
       >
