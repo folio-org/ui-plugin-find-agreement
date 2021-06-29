@@ -17,7 +17,7 @@ export default class AgreementSearch extends React.Component {
     this.modalRef = React.createRef();
     this.modalTrigger = React.createRef();
     this.state = {
-      open: false,
+      open: props.openByDefault || false,
     };
   }
 

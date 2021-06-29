@@ -20,6 +20,7 @@ of the Module Developer's Guide.
 | `onAgreementSelected` | func: (agreement) => {} | Callback fired when a user clicks a agreement | Yes |
 | `dataKey` | string | Optional `dataKey` passed to stripes/connect when creating the connected Agreements component. |  |
 | `renderTrigger` | func: ({ triggerId, onClick, buttonRef }) => {} | Optional render function for the button to open the License search modal. The `onClick` prop should be called when the trigger is clicked (assuming it is a Button). The `buttonRef` ensures that the trigger button is brought back into focus once the lookup modal is closed| |
+| `openByDefault` | boolean | Optionally specifies that the plugin should appear in its opened state when intitially rendered, as opposed to rendering only the trigger [default: `false`] |
 
 ## Additional information
 
