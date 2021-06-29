@@ -9,6 +9,7 @@ const triggerId = 'find-agreement-trigger';
 export default class AgreementSearch extends React.Component {
   static propTypes = {
     renderTrigger: PropTypes.func,
+    openByDefault: PropTypes.bool,
   };
 
   constructor(props) {
