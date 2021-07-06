@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
 import { StripesConnectedSource } from '@folio/stripes/smart-components';
 import { getSASParams, preventResourceRefresh } from '@folio/stripes-erm-components';
@@ -126,7 +125,7 @@ export default class Container extends React.Component {
   }
 
   queryGetter = () => {
-    return get(this.props.resources, 'agreementSearchParams', {});
+    return this.props.resources?.agreementSearchParams ?? {};
   }
 
   render() {
@@ -139,13 +138,13 @@ export default class Container extends React.Component {
     return (
       <View
         data={{
-          agreements: get(resources, 'agreements.records', []),
-          agreementStatusValues: get(resources, 'agreementStatusValues.records', []),
-          renewalPriorityValues: get(resources, 'renewalPriorityValues.records', []),
-          isPerpetualValues: get(resources, 'isPerpetualValues.records', []),
-          orgRoleValues: get(resources, 'orgRoleValues.records', []),
-          contactRoleValues: get(resources, 'contactRoleValues.records', []),
-          tagsValues: get(resources, 'tagsValues.records', []),
+          agreements: resources?.agreements?.records ?? [],
+          agreementStatusValues: resources?.agreementStatusValues?.records ?? [],
+          renewalPriorityValues: resources?.renewalPriorityValues?.records ?? [],
+          isPerpetualValues: resources?.isPerpetualValues?.records ?? [],
+          orgRoleValues: resources?.orgRoleValues?.records ?? [],
+          contactRoleValues: resources?.contactRoleValues?.records ?? [],
+          tagsValues: resources?.tagsValues?.records ?? [],
           supplementaryProperties: resources?.supplementaryProperties?.records ?? []
         }}
         onNeedMoreData={this.handleNeedMoreData}
