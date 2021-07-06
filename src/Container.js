@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { StripesConnectedSource } from '@folio/stripes/smart-components';
-import { getSASParams, preventResourceRefresh } from '@folio/stripes-erm-components';
+import { generateQueryParams, preventResourceRefresh } from '@folio/stripes-erm-components';
 
 import View from './View';
 
@@ -19,7 +19,7 @@ export default class Container extends React.Component {
       recordsRequired: '%{resultCount}',
       perRequest: 100,
       limitParam: 'perPage',
-      params: getSASParams({
+      params: generateQueryParams({
         searchKey: 'name,alternateNames.name,description',
         filterKeys: {
           agreementStatus: 'agreementStatus.value',
