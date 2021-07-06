@@ -50,7 +50,6 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
 
   const renderCheckboxFilter = (name, props) => {
     const groupFilters = activeFilters[name] || [];
-
     return (
       <Accordion
         displayClearButton={groupFilters.length > 0}

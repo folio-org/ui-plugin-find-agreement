@@ -29,12 +29,11 @@ export default class Container extends React.Component {
           renewalPriority: 'renewalPriority.value',
           orgs: 'orgs.org',
           role: 'orgs.roles.role',
-          tags: 'tags.value',
+          tags: 'tags.label',
         },
         sortKeys: {
           agreementStatus: 'agreementStatus.label',
         },
-        queryGetter: r => r.agreementSearchParams,
       }),
     },
     contactRoleValues: {
@@ -80,6 +79,7 @@ export default class Container extends React.Component {
         sort: 'name',
       }
     },
+    query: { initialValue: {} },
     resultCount: { initialValue: INITIAL_RESULT_COUNT },
   });
 
@@ -106,8 +106,8 @@ export default class Container extends React.Component {
       this.searchField.current.focus();
     }
 
-    this.props.mutator.agreementSearchParams.update({
-      filters: 'agreementStatus.Active,agreementStatus.Draft,agreementStatus.In negotiation,agreementStatus.Requested',
+    this.props.mutator.query.update({
+      filters: 'agreementStatus.active,agreementStatus.draft,agreementStatus.in_negotiation,agreementStatus.requested',
     });
   }
 
@@ -117,16 +117,12 @@ export default class Container extends React.Component {
     }
   }
 
-  querySetter = ({ nsValues, state }) => {
-    if (/reset/.test(state.changeType)) {
-      this.props.mutator.agreementSearchParams.replace(nsValues);
-    } else {
-      this.props.mutator.agreementSearchParams.update(nsValues);
-    }
+  querySetter = ({ nsValues }) => {
+    this.props.mutator.query.update(nsValues);
   }
 
   queryGetter = () => {
-    return this.props.resources?.agreementSearchParams ?? {};
+    return this.props?.resources?.query ?? {};
   }
 
   render() {
