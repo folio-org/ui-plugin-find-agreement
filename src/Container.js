@@ -26,6 +26,7 @@ export default class Container extends React.Component {
           contactRole: 'contacts.role',
           contacts: 'contacts.user',
           isPerpetual: 'isPerpetual.value',
+          renewalPriority: 'renewalPriority.value',
           orgs: 'orgs.org',
           role: 'orgs.roles.role',
           tags: 'tags.value',
