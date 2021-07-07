@@ -41,6 +41,36 @@ export default function config() {
     return getItems(schema, request, 'agreements');
   });
 
+  this.get('/erm/contacts', { results: [] });
+
+  this.get('/erm/custprops', () => []);
+
+  this.get('/erm/refdata/InternalContact/role', () => {
+    return [
+      {
+        id: '188389636d9ece46016d9ed0180c001f',
+        value: 'agreement_owner',
+        label: 'Agreement owner',
+      },
+      {
+        id: '188389636d9ece46016d9ed018160020',
+        value: 'authorized_signatory',
+        label: 'Authorized signatory',
+      },
+      {
+        id: '188389636d9ece46016d9ed018200021',
+        value: 'erm_librarian',
+        label: 'ERM librarian',
+      },
+      {
+        id: '188389636d9ece46016d9ed018280022',
+        value: 'subject_specialist',
+        label: 'Subject specialist',
+      },
+    ];
+  });
+
+
   this.get('/erm/org', () => [
     {
       'id':'7f13f51d-f63f-48ba-b919-224c92f2d16b',
