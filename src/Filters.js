@@ -125,7 +125,7 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
         onClearFilter={() => { filterHandlers.clearGroup('role'); }}
         separator={false}
       >
-        <FormattedMessage id="ui-agreements.organizations.selectRole">
+        <FormattedMessage id="ui-plugin-find-agreement.organizations.selectRole">
           {placeholder => (
             <Selection
               dataOptions={dataOptions}
