@@ -113,7 +113,6 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
       label: role.label,
     }));
 
-    const orgFilters = activeFilters.orgs || [];
     const roleFilters = activeFilters.role || [];
 
     return (
@@ -126,12 +125,16 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
         onClearFilter={() => { filterHandlers.clearGroup('role'); }}
         separator={false}
       >
-        <Selection
-          dataOptions={dataOptions}
-          disabled={orgFilters.length === 0}
-          onChange={value => filterHandlers.state({ ...activeFilters, role: [value] })}
-          value={roleFilters[0] || ''}
-        />
+        <FormattedMessage id="ui-plugin-find-agreement.organizations.selectRole">
+          {placeholder => (
+            <Selection
+              dataOptions={dataOptions}
+              onChange={value => filterHandlers.state({ ...activeFilters, role: [value] })}
+              placeholder={typeof placeholder === 'string' ? placeholder : placeholder[0]}
+              value={roleFilters[0] || ''}
+            />
+          )}
+        </FormattedMessage>
       </Accordion>
     );
   };
