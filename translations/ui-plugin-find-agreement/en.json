@@ -10,6 +10,7 @@
   "prop.name": "Name",
   "prop.organizations": "Organizations",
   "prop.orgRole": "Organization role",
+  "organizations.selectRole": "Select a role",
   "prop.periodStart": "Period start",
   "prop.periodEnd": "Period end",
   "prop.renewalPriority": "Renewal priority",
