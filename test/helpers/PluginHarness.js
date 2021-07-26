@@ -12,13 +12,13 @@ const PluginHarness = ({ onAgreementSelected = () => { }, ...rest }) => {
       id="clickable-find-agreement"
       marginTop0
       onAgreementSelected={onAgreementSelected}
-      renderTrigger={(props) => {
+      renderTrigger={(triggerProps) => {
         const buttonProps = {
           'aria-haspopup': 'true',
           'buttonStyle': 'primary',
           'id': 'find-agreement-btn',
           'name': 'dummy',
-          'onClick': props.onClick,
+          'onClick': triggerProps.onClick,
           'marginBottom0': true
         };
 
@@ -37,10 +37,10 @@ const PluginHarness = ({ onAgreementSelected = () => { }, ...rest }) => {
       {...rest}
     />
   );
-}
+};
 
 PluginHarness.propTypes = {
   onAgreementSelected: PropTypes.func
-}
+};
 
 export default PluginHarness;
