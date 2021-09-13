@@ -1,17 +1,17 @@
 {
-    "selectAgreement": "Select agreement",
-    "meta.title": "Agreement Finder Plugin",
-    "agreements": "Agreements",
-    "searchInputLabel": "Search agreements",
+    "selectAgreement": "Vereinbarung auswählen",
+    "meta.title": "Plugin Vereinbarung finden",
+    "agreements": "Vereinbarungen",
+    "searchInputLabel": "Vereinbarungen suchen",
     "prop.agreementStatus": "Status",
-    "prop.cancellationDeadline": "Cancellation deadline",
+    "prop.cancellationDeadline": "Stornierungsfrist",
     "prop.isPerpetual": "Dauerhafter Zugriff",
     "prop.name": "Name",
-    "prop.organizations": "Organizations",
-    "prop.orgRole": "Organization role",
-    "prop.renewalPriority": "Renewal priority",
+    "prop.organizations": "Organisationen",
+    "prop.orgRole": "Rolle der Organisation",
+    "prop.renewalPriority": "Verlängerungspriorität",
     "prop.tags": "Tags",
     "prop.periodEnd": "Ende des Zeitraums",
     "prop.periodStart": "Beginn des Zeitraums",
-    "permission.search": "Find Agreement Plugin: Search agreements"
+    "permission.search": "eManagement Plugin: Vereinbarungen suchen"
 }
