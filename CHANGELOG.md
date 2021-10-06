@@ -1,6 +1,9 @@
 # Change history for ui-plugin-find-agreement
 
-## 7.0.0 (In Progress)
+## 8.0.0 2021-10-06
+* Upgrade to stripes v7.
+* Bring search options in ui-plugin-find-agreement in line with ui-agreements search and filter. ERM-1600
+* Added descriptions to visible permission sets. ERM-1597
 * Included interface dependency for erm 5.0
 
 ## 6.1.0 2021-06-16
