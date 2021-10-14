@@ -13,5 +13,10 @@
     "prop.tags": "标签",
     "prop.periodEnd": "期限结束",
     "prop.periodStart": "期限开始",
-    "permission.search": "查找协议插件：搜索协议"
+    "permission.search": "查找协议插件：搜索协议",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }

@@ -13,5 +13,10 @@
     "prop.tags": "タグ",
     "prop.periodEnd": "期間終了",
     "prop.periodStart": "期間開始",
-    "permission.search": "Find Agreement Plugin: Search agreements"
+    "permission.search": "Find Agreement Plugin: Search agreements",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }

@@ -13,5 +13,10 @@
     "prop.tags": "Etykiety",
     "prop.periodEnd": "Koniec okresu",
     "prop.periodStart": "Początek okresu",
-    "permission.search": "Wtyczka wyszukiwania umów: Szukaj umów"
+    "permission.search": "Wtyczka wyszukiwania umów: Szukaj umów",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }

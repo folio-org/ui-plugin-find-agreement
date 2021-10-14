@@ -13,5 +13,10 @@
     "prop.tags": "Tags",
     "prop.periodEnd": "Fim do período",
     "prop.periodStart": "Início do período",
-    "permission.search": "Plugin de pesquisar contratos: Pesquisar contratos"
+    "permission.search": "Plugin de pesquisar contratos: Pesquisar contratos",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }
