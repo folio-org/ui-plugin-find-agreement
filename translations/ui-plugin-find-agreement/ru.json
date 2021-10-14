@@ -13,5 +13,10 @@
     "prop.tags": "Tags",
     "prop.periodEnd": "Конец периода",
     "prop.periodStart": "Начало периода",
-    "permission.search": "Find Agreement Plugin: Search agreements"
+    "permission.search": "Find Agreement Plugin: Search agreements",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }

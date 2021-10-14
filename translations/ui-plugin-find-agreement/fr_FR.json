@@ -13,5 +13,10 @@
     "prop.tags": "Mots-clés",
     "prop.periodEnd": "Fin de période",
     "prop.periodStart": "Début de période",
-    "permission.search": "Recherche du plugin Accords: Rechercher des accords"
+    "permission.search": "Recherche du plugin Accords: Rechercher des accords",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }

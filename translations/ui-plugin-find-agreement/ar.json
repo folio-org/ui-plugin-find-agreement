@@ -13,5 +13,10 @@
     "prop.tags": "الوسوم",
     "prop.periodEnd": "انتهاء الفترة",
     "prop.periodStart": "بدء الفترة",
-    "permission.search": "برنامج باحث الإتفاقية المساعد: ابحث الإتفاقيات"
+    "permission.search": "برنامج باحث الإتفاقية المساعد: ابحث الإتفاقيات",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }

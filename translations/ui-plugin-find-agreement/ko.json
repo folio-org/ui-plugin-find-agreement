@@ -13,5 +13,10 @@
     "prop.tags": "태그",
     "prop.periodEnd": "기간 종료",
     "prop.periodStart": "기간 시작",
-    "permission.search": "계약 플러그인 찾기 : 계약 검색"
+    "permission.search": "계약 플러그인 찾기 : 계약 검색",
+    "organizations.selectRole": "Select a role",
+    "agreements.startDate": "Start date",
+    "agreements.endDate": "End date",
+    "agreements.internalContacts": "Internal contacts",
+    "agreements.internalContactsRole": "Internal contact role"
 }
