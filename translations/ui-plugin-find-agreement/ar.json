@@ -14,9 +14,9 @@
     "prop.periodEnd": "انتهاء الفترة",
     "prop.periodStart": "بدء الفترة",
     "permission.search": "برنامج باحث الإتفاقية المساعد: ابحث الإتفاقيات",
-    "organizations.selectRole": "Select a role",
-    "agreements.startDate": "Start date",
-    "agreements.endDate": "End date",
-    "agreements.internalContacts": "Internal contacts",
-    "agreements.internalContactsRole": "Internal contact role"
+    "organizations.selectRole": "اختر دورًا",
+    "agreements.startDate": "تاريخ البدء",
+    "agreements.endDate": "تاريخ الانتهاء",
+    "agreements.internalContacts": "جهات الاتصال الداخلية",
+    "agreements.internalContactsRole": "دور جهة الاتصال الداخلية"
 }
