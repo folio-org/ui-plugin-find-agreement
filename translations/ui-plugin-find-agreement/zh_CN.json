@@ -14,9 +14,9 @@
     "prop.periodEnd": "期限结束",
     "prop.periodStart": "期限开始",
     "permission.search": "查找协议插件：搜索协议",
-    "organizations.selectRole": "Select a role",
-    "agreements.startDate": "Start date",
-    "agreements.endDate": "End date",
-    "agreements.internalContacts": "Internal contacts",
-    "agreements.internalContactsRole": "Internal contact role"
+    "organizations.selectRole": "选择一个角色",
+    "agreements.startDate": "起始日期",
+    "agreements.endDate": "终止日期",
+    "agreements.internalContacts": "内部联系人",
+    "agreements.internalContactsRole": "内部联系人角色"
 }

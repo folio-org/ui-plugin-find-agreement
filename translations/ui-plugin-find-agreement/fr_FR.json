@@ -14,9 +14,9 @@
     "prop.periodEnd": "Fin de période",
     "prop.periodStart": "Début de période",
     "permission.search": "Recherche du plugin Accords: Rechercher des accords",
-    "organizations.selectRole": "Select a role",
-    "agreements.startDate": "Start date",
-    "agreements.endDate": "End date",
-    "agreements.internalContacts": "Internal contacts",
+    "organizations.selectRole": "Sélectionnez un rôle",
+    "agreements.startDate": "Date de début",
+    "agreements.endDate": "Date de fin",
+    "agreements.internalContacts": "Contacts internes",
     "agreements.internalContactsRole": "Internal contact role"
 }
