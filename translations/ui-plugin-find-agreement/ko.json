@@ -1,6 +1,6 @@
 {
     "selectAgreement": "계약 선택",
-    "meta.title": "계약 찾기 플러그인",
+    "meta.title": "계약(Agreement) 찾기 플러그인",
     "agreements": "계약",
     "searchInputLabel": "계약 검색",
     "prop.agreementStatus": "상태",
@@ -14,9 +14,9 @@
     "prop.periodEnd": "기간 종료",
     "prop.periodStart": "기간 시작",
     "permission.search": "계약 플러그인 찾기 : 계약 검색",
-    "organizations.selectRole": "Select a role",
-    "agreements.startDate": "Start date",
-    "agreements.endDate": "End date",
-    "agreements.internalContacts": "Internal contacts",
-    "agreements.internalContactsRole": "Internal contact role"
+    "organizations.selectRole": "역할 선택",
+    "agreements.startDate": "시작일",
+    "agreements.endDate": "종료일",
+    "agreements.internalContacts": "기관 담당자",
+    "agreements.internalContactsRole": "기관 담당자 역할"
 }
