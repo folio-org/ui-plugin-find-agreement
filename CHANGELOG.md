@@ -1,4 +1,7 @@
 # Change history for ui-plugin-find-agreement
+## 8.1.0 2022-03-03
+* ERM-1994 Prepare Plugin Find Agreement for RTL development
+* Updated stripes dependencies
 
 ## 8.0.0 2021-10-06
 * Upgrade to stripes v7.
