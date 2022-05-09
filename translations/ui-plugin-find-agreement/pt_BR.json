@@ -1,16 +1,22 @@
 {
     "selectAgreement": "Selecione o contrato",
-    "meta.title": "Localizador de contrato ERM (plugin)",
+    "meta.title": "Plugin localizador de contratos",
     "agreements": "Contratos",
     "searchInputLabel": "Pesquisar contratos",
     "prop.agreementStatus": "Status",
     "prop.cancellationDeadline": "Prazo de cancelamento",
-    "prop.endDate": "Data final",
     "prop.isPerpetual": "É perpétuo",
     "prop.name": "Nome",
     "prop.organizations": "Organizações",
     "prop.orgRole": "Função da organização",
     "prop.renewalPriority": "Prioridade de renovação",
-    "prop.startDate": "Data de início",
-    "prop.tags": "Tags"
+    "prop.tags": "Tags",
+    "prop.periodEnd": "Fim do período",
+    "prop.periodStart": "Início do período",
+    "permission.search": "Plugin de pesquisar contratos: Pesquisar contratos",
+    "organizations.selectRole": "Selecione uma função",
+    "agreements.startDate": "Data de início",
+    "agreements.endDate": "Data de término",
+    "agreements.internalContacts": "Contatos internos",
+    "agreements.internalContactsRole": "Função do contato interno"
 }

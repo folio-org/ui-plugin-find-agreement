@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { get, noop } from 'lodash';
-import { FormattedDate, FormattedMessage } from 'react-intl';
+import { noop } from 'lodash';
+import { FormattedMessage } from 'react-intl';
 
 import {
+  FormattedUTCDate,
   MultiColumnList,
   SearchField,
   Pane,
@@ -29,12 +30,7 @@ export default class Agreements extends React.Component {
     children: PropTypes.object,
     contentRef: PropTypes.object,
     data: PropTypes.shape({
-      agreements: PropTypes.array.isRequired,
-      agreementStatusValues: PropTypes.array.isRequired,
-      renewalPriorityValues: PropTypes.array.isRequired,
-      isPerpetualValues: PropTypes.array.isRequired,
-      orgRoleValues: PropTypes.array.isRequired,
-      tagsValues: PropTypes.array.isRequired,
+      agreements: PropTypes.arrayOf(PropTypes.object).isRequired,
     }),
     disableRecordCreation: PropTypes.bool,
     onNeedMoreData: PropTypes.func.isRequired,
@@ -68,8 +64,8 @@ export default class Agreements extends React.Component {
   columnMapping = {
     name: <FormattedMessage id="ui-plugin-find-agreement.prop.name" />,
     agreementStatus: <FormattedMessage id="ui-plugin-find-agreement.prop.agreementStatus" />,
-    startDate: <FormattedMessage id="ui-plugin-find-agreement.prop.startDate" />,
-    endDate: <FormattedMessage id="ui-plugin-find-agreement.prop.endDate" />,
+    startDate: <FormattedMessage id="ui-plugin-find-agreement.prop.periodStart" />,
+    endDate: <FormattedMessage id="ui-plugin-find-agreement.prop.periodEnd" />,
     cancellationDeadline: <FormattedMessage id="ui-plugin-find-agreement.prop.cancellationDeadline" />,
   }
 
@@ -82,29 +78,28 @@ export default class Agreements extends React.Component {
   }
 
   formatter = {
-    agreementStatus: a => get(a, 'agreementStatus.label'),
-    startDate: a => a.startDate && <FormattedDate value={a.startDate} />,
-    endDate: a => a.endDate && <FormattedDate value={a.endDate} />,
-    cancellationDeadline: a => a.cancellationDeadline && <FormattedDate value={a.cancellationDeadline} />,
+    agreementStatus: a => a?.agreementStatus?.label,
+    startDate: a => <div data-test-start-date>{(a.startDate ? <FormattedUTCDate value={a.startDate} /> : '')}</div>,
+    endDate: a => <div data-test-end-date>{(a.endDate ? <FormattedUTCDate value={a.endDate} /> : '')}</div>,
+    cancellationDeadline: a => <div data-test-cancellation-deadline>{(a.cancellationDeadline ? <FormattedUTCDate value={a.cancellationDeadline} /> : '')}</div>,
   }
 
   rowFormatter = (row) => {
     const { rowClass, rowData, rowIndex, rowProps = {}, cells } = row;
 
     return (
-      <div
-        aria-rowindex={rowIndex + 2}
+      <button
+        key={`row-${rowIndex}`}
         className={rowClass}
         data-label={[
           rowData.name,
           this.formatter.agreementStatus(rowData),
         ].join('...')}
-        key={`row-${rowIndex}`}
-        role="row"
+        type="button"
         {...rowProps}
       >
         {cells}
-      </div>
+      </button>
     );
   }
 
@@ -122,9 +117,9 @@ export default class Agreements extends React.Component {
     return (
       <div data-test-agreements-no-results-message>
         <NoResultsMessage
-          source={source}
-          searchTerm={query.query || ''}
           filterPaneIsVisible
+          searchTerm={query.query || ''}
+          source={source}
           toggleFilterPane={noop}
         />
       </div>
@@ -144,10 +139,10 @@ export default class Agreements extends React.Component {
             <FormattedMessage id={hideOrShowMessageId}>
               {hideOrShowMessage => (
                 <FilterPaneToggle
-                  visible={filterPaneIsVisible}
                   aria-label={`${hideOrShowMessage}...s${appliedFiltersMessage}`}
-                  onClick={this.toggleFilterPane}
                   badge={!filterPaneIsVisible && filterCount ? filterCount : undefined}
+                  onClick={this.toggleFilterPane}
+                  visible={filterPaneIsVisible}
                 />
               )}
             </FormattedMessage>
@@ -184,13 +179,13 @@ export default class Agreements extends React.Component {
     const sortOrder = query.sort || '';
 
     return (
-      <div data-test-agreements ref={contentRef}>
+      <div ref={contentRef} data-test-agreements>
         <SearchAndSortQuery
           initialFilterState={{
-            agreementStatus: ['Active', 'Draft', 'In negotiation', 'Requested']
+            agreementStatus: ['active', 'draft', 'in_negotiation', 'requested']
           }}
-          initialSortState={{ sort: 'name' }}
           initialSearchState={{ query: '' }}
+          initialSortState={{ sort: 'name' }}
           queryGetter={queryGetter}
           querySetter={querySetter}
           syncToLocationSearch={false}
@@ -210,7 +205,10 @@ export default class Agreements extends React.Component {
               const disableReset = () => (!filterChanged && !searchChanged);
 
               return (
-                <Paneset id="agreements-paneset">
+                <Paneset
+                  id="agreements-paneset"
+                  isRoot
+                >
                   {this.state.filterPaneIsVisible &&
                     <Pane
                       defaultWidth="20%"
@@ -221,7 +219,7 @@ export default class Agreements extends React.Component {
                         {/* TODO: Use forthcoming <SearchGroup> or similar component */}
                         <div className={css.searchGroupWrap}>
                           <FormattedMessage id="ui-plugin-find-agreement.searchInputLabel">
-                            { ariaLabel => (
+                            {ariaLabel => (
                               <SearchField
                                 aria-label={ariaLabel}
                                 autoFocus
@@ -232,11 +230,7 @@ export default class Agreements extends React.Component {
                                 marginBottom0
                                 name="query"
                                 onChange={getSearchHandlers().query}
-                                onClear={() => {
-                                  getSearchHandlers().clear();
-                                  // TODO: Add way to trigger search automatically
-                                  // onSubmitSearch();
-                                }}
+                                onClear={getSearchHandlers().reset}
                                 value={searchValue.query}
                               />
                             )}
@@ -255,8 +249,8 @@ export default class Agreements extends React.Component {
                         <div className={css.resetButtonWrap}>
                           <Button
                             buttonStyle="none"
-                            id="clickable-reset-all"
                             disabled={disableReset()}
+                            id="clickable-reset-all"
                             onClick={resetAll}
                           >
                             <Icon icon="times-circle-solid">
@@ -277,8 +271,8 @@ export default class Agreements extends React.Component {
                     defaultWidth="fill"
                     firstMenu={this.renderResultsFirstMenu(activeFilters)}
                     padContent={false}
-                    paneTitle={<FormattedMessage id="ui-plugin-find-agreement.agreements" />}
                     paneSub={this.renderResultsPaneSubtitle(source)}
+                    paneTitle={<FormattedMessage id="ui-plugin-find-agreement.agreements" />}
                   >
                     <MultiColumnList
                       autosize
@@ -299,7 +293,7 @@ export default class Agreements extends React.Component {
                       visibleColumns={visibleColumns}
                     />
                   </Pane>
-                  { children }
+                  {children}
                 </Paneset>
               );
             }

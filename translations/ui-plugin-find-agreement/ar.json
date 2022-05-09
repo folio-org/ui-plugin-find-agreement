@@ -1,16 +1,22 @@
 {
     "selectAgreement": "اختر اتفاقية",
-    "meta.title": "باحث اتفاقية إدارة الموارد الإلكترونية (برنامج مساعد)",
-    "agreements": "الاتفاقيات",
+    "meta.title": "برنامج باحث الاتفاقية المساعد",
+    "agreements": "اتفاقيات",
     "searchInputLabel": "بحث الاتفاقيات",
     "prop.agreementStatus": "الحالة",
     "prop.cancellationDeadline": "الموعد النهائي للإلغاء",
-    "prop.endDate": "تاريخ الانتهاء",
     "prop.isPerpetual": "دائم",
     "prop.name": "الاسم",
     "prop.organizations": "المؤسسات",
     "prop.orgRole": "دور المؤسسة",
     "prop.renewalPriority": "أولوية التجديد",
-    "prop.startDate": "تاريخ البدء",
-    "prop.tags": "الوسوم"
+    "prop.tags": "الوسوم",
+    "prop.periodEnd": "انتهاء الفترة",
+    "prop.periodStart": "بدء الفترة",
+    "permission.search": "برنامج باحث الإتفاقية المساعد: ابحث الإتفاقيات",
+    "organizations.selectRole": "اختر دورًا",
+    "agreements.startDate": "تاريخ البدء",
+    "agreements.endDate": "تاريخ الانتهاء",
+    "agreements.internalContacts": "جهات الاتصال الداخلية",
+    "agreements.internalContactsRole": "دور جهة الاتصال الداخلية"
 }

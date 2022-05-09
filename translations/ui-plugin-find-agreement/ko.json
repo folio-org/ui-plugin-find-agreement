@@ -1,0 +1,22 @@
+{
+    "selectAgreement": "계약 선택",
+    "meta.title": "계약(Agreement) 찾기 플러그인",
+    "agreements": "계약",
+    "searchInputLabel": "계약 검색",
+    "prop.agreementStatus": "상태",
+    "prop.cancellationDeadline": "취소 기한",
+    "prop.isPerpetual": "영구적 서비스",
+    "prop.name": "이름",
+    "prop.organizations": "공급사",
+    "prop.orgRole": "공급사 역할",
+    "prop.renewalPriority": "갱신 우선 순위",
+    "prop.tags": "태그",
+    "prop.periodEnd": "기간 종료",
+    "prop.periodStart": "기간 시작",
+    "permission.search": "계약 플러그인 찾기 : 계약 검색",
+    "organizations.selectRole": "역할 선택",
+    "agreements.startDate": "시작일",
+    "agreements.endDate": "종료일",
+    "agreements.internalContacts": "기관 담당자",
+    "agreements.internalContactsRole": "기관 담당자 역할"
+}

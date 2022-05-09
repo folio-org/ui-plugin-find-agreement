@@ -8,13 +8,14 @@ import css from './AgreementSearch.css';
 
 export default class AgreementSearchModal extends React.Component {
   static propTypes = {
-    stripes: PropTypes.shape({
-      connect: PropTypes.func.isRequired,
-    }),
+    dataKey: PropTypes.string,
+    modalRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
     onAgreementSelected: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
     open: PropTypes.bool,
-    dataKey: PropTypes.string,
+    stripes: PropTypes.shape({
+      connect: PropTypes.func.isRequired,
+    }),
   };
 
   static defaultProps = {
@@ -24,6 +25,7 @@ export default class AgreementSearchModal extends React.Component {
   constructor(props) {
     super(props);
 
+    this.modalRef = props.modalRef || React.createRef();
     this.connectedContainer = props.stripes.connect(Container, { dataKey: props.dataKey });
   }
 
@@ -37,6 +39,7 @@ export default class AgreementSearchModal extends React.Component {
       <FormattedMessage id="ui-plugin-find-agreement.selectAgreement">
         {label => (
           <Modal
+            ref={this.modalRef}
             contentClass={css.modalContent}
             dismissible
             enforceFocus={false}

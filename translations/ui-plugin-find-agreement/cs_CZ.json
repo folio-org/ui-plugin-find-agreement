@@ -1,0 +1,22 @@
+{
+    "selectAgreement": "Select agreement",
+    "meta.title": "Agreement Finder Plugin",
+    "agreements": "Smlouvy",
+    "searchInputLabel": "Prohledávat smlouvy",
+    "prop.agreementStatus": "Stav",
+    "prop.cancellationDeadline": "Cancellation deadline",
+    "prop.isPerpetual": "Is perpetual",
+    "prop.name": "Name",
+    "prop.organizations": "Organizations",
+    "prop.orgRole": "Organization role",
+    "prop.renewalPriority": "Renewal priority",
+    "prop.tags": "Tags",
+    "prop.periodEnd": "Period end",
+    "prop.periodStart": "Period start",
+    "permission.search": "Najít plugin Smlouvy: Vyhledávání smluv",
+    "organizations.selectRole": "Vyberte roli",
+    "agreements.startDate": "Datum zahájení",
+    "agreements.endDate": "Datum ukončení",
+    "agreements.internalContacts": "Interní kontakty",
+    "agreements.internalContactsRole": "Role interního kontaktu"
+}

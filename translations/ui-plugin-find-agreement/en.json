@@ -1,20 +1,22 @@
 {
-  "meta.title": "ERM Agreement finder (plugin)",
-
+  "meta.title": "Agreement Finder Plugin",
+  "permission.search": "Find Agreement Plugin: Search agreements",
   "selectAgreement": "Select agreement",
-
   "agreements": "Agreements",
   "searchInputLabel": "Search agreements",
-
   "prop.agreementStatus": "Status",
   "prop.cancellationDeadline": "Cancellation deadline",
-  "prop.endDate": "End date",
   "prop.isPerpetual": "Is perpetual",
   "prop.name": "Name",
   "prop.organizations": "Organizations",
   "prop.orgRole": "Organization role",
+  "organizations.selectRole": "Select a role",
+  "prop.periodStart": "Period start",
+  "prop.periodEnd": "Period end",
   "prop.renewalPriority": "Renewal priority",
-  "prop.startDate": "Start date",
-  "prop.tags": "Tags"
-
+  "prop.tags": "Tags",
+  "agreements.startDate": "Start date",
+  "agreements.endDate": "End date",
+  "agreements.internalContacts": "Internal contacts",
+  "agreements.internalContactsRole": "Internal contact role"
 }
