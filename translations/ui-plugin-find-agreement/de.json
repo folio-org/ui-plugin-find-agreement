@@ -14,9 +14,9 @@
     "prop.periodEnd": "Ende des Zeitraums",
     "prop.periodStart": "Beginn des Zeitraums",
     "permission.search": "eManagement Plugin: Vereinbarungen suchen",
-    "organizations.selectRole": "Select a role",
-    "agreements.startDate": "Start date",
-    "agreements.endDate": "End date",
-    "agreements.internalContacts": "Internal contacts",
-    "agreements.internalContactsRole": "Internal contact role"
+    "organizations.selectRole": "Rolle auswählen",
+    "agreements.startDate": "Startdatum",
+    "agreements.endDate": "Enddatum",
+    "agreements.internalContacts": "Interne Kontakte",
+    "agreements.internalContactsRole": "Rolle des internen Kontakts"
 }
