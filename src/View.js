@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
 import { FormattedMessage } from 'react-intl';
@@ -25,66 +25,60 @@ import {
 import Filters from './Filters';
 import css from './View.css';
 
-export default class Agreements extends React.Component {
-  static propTypes = {
-    children: PropTypes.object,
-    contentRef: PropTypes.object,
-    data: PropTypes.shape({
-      agreements: PropTypes.arrayOf(PropTypes.object).isRequired,
-    }),
-    disableRecordCreation: PropTypes.bool,
-    onNeedMoreData: PropTypes.func.isRequired,
-    onSelectRow: PropTypes.func.isRequired,
-    queryGetter: PropTypes.func.isRequired,
-    querySetter: PropTypes.func.isRequired,
-    searchString: PropTypes.string,
-    source: PropTypes.shape({
-      loaded: PropTypes.func,
-      totalCount: PropTypes.func,
-    }),
-    visibleColumns: PropTypes.arrayOf(PropTypes.string),
-  }
+const Agreements = ({
+  children,
+  contentRef,
+  data = {},
+  onNeedMoreData,
+  onSelectRow,
+  queryGetter,
+  querySetter,
+  source,
+  visibleColumns = [
+    'name',
+    'agreementStatus',
+    'startDate',
+    'endDate',
+    'cancellationDeadline'
+  ]
+}) => {
+  const [filterPaneIsVisible, setFilterPaneIsVisible] = useState(true);
 
-  static defaultProps = {
-    data: {},
-    searchString: '',
-    visibleColumns: [
-      'name',
-      'agreementStatus',
-      'startDate',
-      'endDate',
-      'cancellationDeadline'
-    ],
-  }
+  const searchField = useRef();
+  useEffect(() => {
+    if (searchField.current) {
+      searchField.current.focus();
+    }
+  }, []); // This isn't particularly great, but in the interests of saving time migrating, it will have to do
 
-  state = {
-    filterPaneIsVisible: true,
-  }
+  const query = queryGetter() || {};
+  const count = source ? source.totalCount() : 0;
+  const sortOrder = query.sort || '';
 
-  columnMapping = {
+  const columnMapping = {
     name: <FormattedMessage id="ui-plugin-find-agreement.prop.name" />,
     agreementStatus: <FormattedMessage id="ui-plugin-find-agreement.prop.agreementStatus" />,
     startDate: <FormattedMessage id="ui-plugin-find-agreement.prop.periodStart" />,
     endDate: <FormattedMessage id="ui-plugin-find-agreement.prop.periodEnd" />,
     cancellationDeadline: <FormattedMessage id="ui-plugin-find-agreement.prop.cancellationDeadline" />,
-  }
+  };
 
-  columnWidths = {
+  const columnWidths = {
     name: 300,
     agreementStatus: 150,
     startDate: 120,
     endDate: 120,
     cancellationDeadline: 120,
-  }
+  };
 
-  formatter = {
+  const formatter = {
     agreementStatus: a => a?.agreementStatus?.label,
     startDate: a => <div data-test-start-date>{(a.startDate ? <FormattedUTCDate value={a.startDate} /> : '')}</div>,
     endDate: a => <div data-test-end-date>{(a.endDate ? <FormattedUTCDate value={a.endDate} /> : '')}</div>,
     cancellationDeadline: a => <div data-test-cancellation-deadline>{(a.cancellationDeadline ? <FormattedUTCDate value={a.cancellationDeadline} /> : '')}</div>,
-  }
+  };
 
-  rowFormatter = (row) => {
+  const rowFormatter = (row) => {
     const { rowClass, rowData, rowIndex, rowProps = {}, cells } = row;
 
     return (
@@ -93,7 +87,7 @@ export default class Agreements extends React.Component {
         className={rowClass}
         data-label={[
           rowData.name,
-          this.formatter.agreementStatus(rowData),
+          formatter.agreementStatus(rowData),
         ].join('...')}
         type="button"
         {...rowProps}
@@ -101,15 +95,13 @@ export default class Agreements extends React.Component {
         {cells}
       </button>
     );
-  }
+  };
 
-  toggleFilterPane = () => {
-    this.setState(curState => ({
-      filterPaneIsVisible: !curState.filterPaneIsVisible,
-    }));
-  }
+  const toggleFilterPane = () => {
+    setFilterPaneIsVisible(!filterPaneIsVisible);
+  };
 
-  renderIsEmptyMessage = (query, source) => {
+  const renderIsEmptyMessage = () => {
     if (!source) {
       return 'no source yet';
     }
@@ -124,10 +116,9 @@ export default class Agreements extends React.Component {
         />
       </div>
     );
-  }
+  };
 
-  renderResultsFirstMenu = (filters) => {
-    const { filterPaneIsVisible } = this.state;
+  const renderResultsFirstMenu = (filters) => {
     const filterCount = filters.string !== '' ? filters.string.split(',').length : 0;
     const hideOrShowMessageId = filterPaneIsVisible ?
       'stripes-smart-components.hideSearchPane' : 'stripes-smart-components.showSearchPane';
@@ -141,7 +132,7 @@ export default class Agreements extends React.Component {
                 <FilterPaneToggle
                   aria-label={`${hideOrShowMessage}...s${appliedFiltersMessage}`}
                   badge={!filterPaneIsVisible && filterCount ? filterCount : undefined}
-                  onClick={this.toggleFilterPane}
+                  onClick={toggleFilterPane}
                   visible={filterPaneIsVisible}
                 />
               )}
@@ -150,156 +141,156 @@ export default class Agreements extends React.Component {
         </FormattedMessage>
       </PaneMenu>
     );
-  }
+  };
 
-  renderResultsPaneSubtitle = (source) => {
+  const renderResultsPaneSubtitle = () => {
     if (source && source.loaded()) {
-      const count = source ? source.totalCount() : 0;
       return <FormattedMessage id="stripes-smart-components.searchResultsCountHeader" values={{ count }} />;
     }
 
     return <FormattedMessage id="stripes-smart-components.searchCriteria" />;
-  }
+  };
 
-  render() {
-    const {
-      children,
-      contentRef,
-      data,
-      onNeedMoreData,
-      onSelectRow,
-      queryGetter,
-      querySetter,
-      source,
-      visibleColumns,
-    } = this.props;
+  return (
+    <div ref={contentRef} data-test-agreements>
+      <SearchAndSortQuery
+        initialFilterState={{
+          agreementStatus: ['active', 'draft', 'in_negotiation', 'requested']
+        }}
+        initialSearchState={{ query: '' }}
+        initialSortState={{ sort: 'name' }}
+        queryGetter={queryGetter}
+        querySetter={querySetter}
+        syncToLocationSearch={false}
+      >
+        {
+          ({
+            searchValue,
+            getSearchHandlers,
+            onSubmitSearch,
+            onSort,
+            getFilterHandlers,
+            activeFilters,
+            filterChanged,
+            searchChanged,
+            resetAll,
+          }) => {
+            const disableReset = () => (!filterChanged && !searchChanged);
 
-    const query = queryGetter() || {};
-    const count = source ? source.totalCount() : 0;
-    const sortOrder = query.sort || '';
-
-    return (
-      <div ref={contentRef} data-test-agreements>
-        <SearchAndSortQuery
-          initialFilterState={{
-            agreementStatus: ['active', 'draft', 'in_negotiation', 'requested']
-          }}
-          initialSearchState={{ query: '' }}
-          initialSortState={{ sort: 'name' }}
-          queryGetter={queryGetter}
-          querySetter={querySetter}
-          syncToLocationSearch={false}
-        >
-          {
-            ({
-              searchValue,
-              getSearchHandlers,
-              onSubmitSearch,
-              onSort,
-              getFilterHandlers,
-              activeFilters,
-              filterChanged,
-              searchChanged,
-              resetAll,
-            }) => {
-              const disableReset = () => (!filterChanged && !searchChanged);
-
-              return (
-                <Paneset
-                  id="agreements-paneset"
-                  isRoot
-                >
-                  {this.state.filterPaneIsVisible &&
-                    <Pane
-                      defaultWidth="20%"
-                      onClose={this.toggleFilterPane}
-                      paneTitle={<FormattedMessage id="stripes-smart-components.searchAndFilter" />}
-                    >
-                      <form onSubmit={onSubmitSearch}>
-                        {/* TODO: Use forthcoming <SearchGroup> or similar component */}
-                        <div className={css.searchGroupWrap}>
-                          <FormattedMessage id="ui-plugin-find-agreement.searchInputLabel">
-                            {ariaLabel => (
-                              <SearchField
-                                aria-label={ariaLabel}
-                                autoFocus
-                                className={css.searchField}
-                                data-test-agreement-search-input
-                                id="input-agreement-search"
-                                inputRef={this.searchField}
-                                marginBottom0
-                                name="query"
-                                onChange={getSearchHandlers().query}
-                                onClear={getSearchHandlers().reset}
-                                value={searchValue.query}
-                              />
-                            )}
-                          </FormattedMessage>
-                          <Button
-                            buttonStyle="primary"
-                            disabled={!searchValue.query || searchValue.query === ''}
-                            fullWidth
-                            id="clickable-search-agreements"
-                            marginBottom0
-                            type="submit"
-                          >
-                            <FormattedMessage id="stripes-smart-components.search" />
-                          </Button>
-                        </div>
-                        <div className={css.resetButtonWrap}>
-                          <Button
-                            buttonStyle="none"
-                            disabled={disableReset()}
-                            id="clickable-reset-all"
-                            onClick={resetAll}
-                          >
-                            <Icon icon="times-circle-solid">
-                              <FormattedMessage id="stripes-smart-components.resetAll" />
-                            </Icon>
-                          </Button>
-                        </div>
-                        <Filters
-                          activeFilters={activeFilters.state}
-                          data={data}
-                          filterHandlers={getFilterHandlers()}
-                        />
-                      </form>
-                    </Pane>
-                  }
+            return (
+              <Paneset
+                id="agreements-paneset"
+                isRoot
+              >
+                {filterPaneIsVisible &&
                   <Pane
-                    appIcon={<AppIcon app="agreements" />}
-                    defaultWidth="fill"
-                    firstMenu={this.renderResultsFirstMenu(activeFilters)}
-                    padContent={false}
-                    paneSub={this.renderResultsPaneSubtitle(source)}
-                    paneTitle={<FormattedMessage id="ui-plugin-find-agreement.agreements" />}
+                    defaultWidth="20%"
+                    onClose={toggleFilterPane}
+                    paneTitle={<FormattedMessage id="stripes-smart-components.searchAndFilter" />}
                   >
-                    <MultiColumnList
-                      autosize
-                      columnMapping={this.columnMapping}
-                      columnWidths={this.columnWidths}
-                      contentData={data.agreements}
-                      formatter={this.formatter}
-                      id="list-agreements"
-                      isEmptyMessage={this.renderIsEmptyMessage(query, source)}
-                      onHeaderClick={onSort}
-                      onNeedMoreData={onNeedMoreData}
-                      onRowClick={onSelectRow}
-                      // rowFormatter={this.rowFormatter}
-                      sortDirection={sortOrder.startsWith('-') ? 'descending' : 'ascending'}
-                      sortOrder={sortOrder.replace(/^-/, '').replace(/,.*/, '')}
-                      totalCount={count}
-                      virtualize
-                      visibleColumns={visibleColumns}
-                    />
+                    <form onSubmit={onSubmitSearch}>
+                      {/* TODO: Use forthcoming <SearchGroup> or similar component */}
+                      <div className={css.searchGroupWrap}>
+                        <FormattedMessage id="ui-plugin-find-agreement.searchInputLabel">
+                          {ariaLabel => (
+                            <SearchField
+                              aria-label={ariaLabel}
+                              autoFocus
+                              className={css.searchField}
+                              data-test-agreement-search-input
+                              id="input-agreement-search"
+                              inputRef={searchField}
+                              marginBottom0
+                              name="query"
+                              onChange={getSearchHandlers().query}
+                              onClear={getSearchHandlers().reset}
+                              value={searchValue.query}
+                            />
+                          )}
+                        </FormattedMessage>
+                        <Button
+                          buttonStyle="primary"
+                          disabled={!searchValue.query || searchValue.query === ''}
+                          fullWidth
+                          id="clickable-search-agreements"
+                          marginBottom0
+                          type="submit"
+                        >
+                          <FormattedMessage id="stripes-smart-components.search" />
+                        </Button>
+                      </div>
+                      <div className={css.resetButtonWrap}>
+                        <Button
+                          buttonStyle="none"
+                          disabled={disableReset()}
+                          id="clickable-reset-all"
+                          onClick={resetAll}
+                        >
+                          <Icon icon="times-circle-solid">
+                            <FormattedMessage id="stripes-smart-components.resetAll" />
+                          </Icon>
+                        </Button>
+                      </div>
+                      <Filters
+                        activeFilters={activeFilters.state}
+                        data={data}
+                        filterHandlers={getFilterHandlers()}
+                      />
+                    </form>
                   </Pane>
-                  {children}
-                </Paneset>
-              );
-            }
+                }
+                <Pane
+                  appIcon={<AppIcon app="agreements" />}
+                  defaultWidth="fill"
+                  firstMenu={renderResultsFirstMenu(activeFilters)}
+                  padContent={false}
+                  paneSub={renderResultsPaneSubtitle()}
+                  paneTitle={<FormattedMessage id="ui-plugin-find-agreement.agreements" />}
+                >
+                  <MultiColumnList
+                    autosize
+                    columnMapping={columnMapping}
+                    columnWidths={columnWidths}
+                    contentData={data.agreements}
+                    formatter={formatter}
+                    id="list-agreements"
+                    isEmptyMessage={renderIsEmptyMessage()}
+                    onHeaderClick={onSort}
+                    onNeedMoreData={onNeedMoreData}
+                    onRowClick={onSelectRow}
+                    rowFormatter={rowFormatter}
+                    sortDirection={sortOrder.startsWith('-') ? 'descending' : 'ascending'}
+                    sortOrder={sortOrder.replace(/^-/, '').replace(/,.*/, '')}
+                    totalCount={count}
+                    virtualize
+                    visibleColumns={visibleColumns}
+                  />
+                </Pane>
+                {children}
+              </Paneset>
+            );
           }
-        </SearchAndSortQuery>
-      </div>
-    );
-  }
-}
+        }
+      </SearchAndSortQuery>
+    </div>
+  );
+};
+
+Agreements.propTypes = {
+  children: PropTypes.object,
+  contentRef: PropTypes.object,
+  data: PropTypes.shape({
+    agreements: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
+  disableRecordCreation: PropTypes.bool,
+  onNeedMoreData: PropTypes.func.isRequired,
+  onSelectRow: PropTypes.func.isRequired,
+  queryGetter: PropTypes.func.isRequired,
+  querySetter: PropTypes.func.isRequired,
+  searchString: PropTypes.string,
+  source: PropTypes.shape({
+    loaded: PropTypes.func,
+    totalCount: PropTypes.func,
+  }),
+  visibleColumns: PropTypes.arrayOf(PropTypes.string),
+};
