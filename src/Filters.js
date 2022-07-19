@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+import { CustomPropertiesFilter } from '@k-int/stripes-kint-components';
+
 import { Accordion, AccordionSet, FilterAccordionHeader, Selection } from '@folio/stripes/components';
 import { IfPermission } from '@folio/stripes/core';
 import { CheckboxFilter, MultiSelectionFilter } from '@folio/stripes/smart-components';
-import { CustomPropertyFilters, DateFilter, InternalContactSelection, OrganizationSelection } from '@folio/stripes-erm-components';
+import { DateFilter, InternalContactSelection, OrganizationSelection } from '@folio/stripes-erm-components';
 
 const propTypes = {
   activeFilters: PropTypes.object,
@@ -19,6 +21,8 @@ const FILTERS = [
   'isPerpetual',
   'tags'
 ];
+
+const CUSTPROP_ENDPOINT = 'erm/refdata';
 
 export default function Filters({ activeFilters, data, filterHandlers }) {
   const intl = useIntl();
@@ -195,11 +199,20 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
   };
 
   const renderCustomPropertyFilters = () => {
-    return <CustomPropertyFilters
+    return <CustomPropertiesFilter
       activeFilters={activeFilters}
-      customProperties={data.supplementaryProperties || []}
-      custPropName="supplementaryProperty"
+      customPropertiesEndpoint={CUSTPROP_ENDPOINT}
       filterHandlers={filterHandlers}
+      labelOverrides={{
+        customProperty: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperty" />,
+        customProperties: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties" />,
+        filtersApplied: (count) => <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.filtersApplied" values={{ count }} />,
+        editCustomPropertyFilters: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.editCustomPropertyFilters" />,
+        filterBuilder: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.filterBuilder" />,
+        customPropertyFilter: (index) => <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.filterIndex" values={{ index: index + 1 }} />,
+        removeFilter: (index) => <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.removeFilter" values={{ index: index + 1 }} />,
+        retiredName: (name) => intl.formatMessage({ id: 'ui-plugin-find-agreement.supplementaryProperties.deprecated' }, { name }),
+      }}
     />;
   };
 
