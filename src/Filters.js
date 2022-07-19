@@ -22,7 +22,7 @@ const FILTERS = [
   'tags'
 ];
 
-const CUSTPROP_ENDPOINT = 'erm/refdata';
+const CUSTPROP_ENDPOINT = 'erm/custprops';
 
 export default function Filters({ activeFilters, data, filterHandlers }) {
   const intl = useIntl();

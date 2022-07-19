@@ -294,3 +294,5 @@ Agreements.propTypes = {
   }),
   visibleColumns: PropTypes.arrayOf(PropTypes.string),
 };
+
+export default Agreements;
