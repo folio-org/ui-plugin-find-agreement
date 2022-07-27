@@ -18,5 +18,13 @@
     "agreements.startDate": "Datum zahájení",
     "agreements.endDate": "Datum ukončení",
     "agreements.internalContacts": "Interní kontakty",
-    "agreements.internalContactsRole": "Role interního kontaktu"
+    "agreements.internalContactsRole": "Role interního kontaktu",
+    "supplementaryProperty": "Doplňková vlastnost",
+    "supplementaryProperties": "Doplňkové vlastnosti",
+    "supplementaryProperties.filtersApplied": "{count} použitých filtrů doplňkových vlastností",
+    "supplementaryProperties.editCustomPropertyFilters": "Úprava filtrů doplňkových vlastností",
+    "supplementaryProperties.filterBuilder": "Tvůrce doplňkového filtru vlastností",
+    "supplementaryProperties.filterIndex": "Filtr doplňkových vlastností {index}",
+    "supplementaryProperties.removeFilter": "Odebrat filtr doplňkových vlastností {index}",
+    "supplementaryProperties.deprecated": "ZASTARALÉ: {name}"
 }

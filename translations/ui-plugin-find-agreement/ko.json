@@ -18,5 +18,13 @@
     "agreements.startDate": "시작일",
     "agreements.endDate": "종료일",
     "agreements.internalContacts": "기관 담당자",
-    "agreements.internalContactsRole": "기관 담당자 역할"
+    "agreements.internalContactsRole": "기관 담당자 역할",
+    "supplementaryProperty": "Supplementary property",
+    "supplementaryProperties": "Supplementary properties",
+    "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
+    "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
+    "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
+    "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
+    "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
+    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
 }

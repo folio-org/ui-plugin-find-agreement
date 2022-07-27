@@ -18,5 +18,13 @@
     "agreements.startDate": "Data de início",
     "agreements.endDate": "Data de término",
     "agreements.internalContacts": "Contatos internos",
-    "agreements.internalContactsRole": "Função do contato interno"
+    "agreements.internalContactsRole": "Função do contato interno",
+    "supplementaryProperty": "Supplementary property",
+    "supplementaryProperties": "Supplementary properties",
+    "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
+    "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
+    "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
+    "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
+    "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
+    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
 }
