@@ -19,12 +19,12 @@
     "agreements.endDate": "تاريخ الانتهاء",
     "agreements.internalContacts": "جهات الاتصال الداخلية",
     "agreements.internalContactsRole": "دور جهة الاتصال الداخلية",
-    "supplementaryProperty": "Supplementary property",
+    "supplementaryProperty": "خاصية تكميلية",
     "supplementaryProperties": "Supplementary properties",
-    "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
+    "supplementaryProperties.filtersApplied": "{count} منقح خصائص تكميلية تم تطبيقه",
     "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
     "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
     "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
     "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
-    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
+    "supplementaryProperties.deprecated": "مهمل: {name}"
 }
