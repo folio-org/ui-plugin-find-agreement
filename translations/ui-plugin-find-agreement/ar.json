@@ -20,10 +20,10 @@
     "agreements.internalContacts": "جهات الاتصال الداخلية",
     "agreements.internalContactsRole": "دور جهة الاتصال الداخلية",
     "supplementaryProperty": "خاصية تكميلية",
-    "supplementaryProperties": "Supplementary properties",
+    "supplementaryProperties": "خصائص تكميلية",
     "supplementaryProperties.filtersApplied": "{count} منقح خصائص تكميلية تم تطبيقه",
-    "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
-    "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
+    "supplementaryProperties.editCustomPropertyFilters": "تحرير منقحات الخصائص التكميلية",
+    "supplementaryProperties.filterBuilder": "باني منقح الخاصية التكميلية",
     "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
     "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
     "supplementaryProperties.deprecated": "مهمل: {name}"
