@@ -19,12 +19,12 @@
     "agreements.endDate": "종료일",
     "agreements.internalContacts": "기관 담당자",
     "agreements.internalContactsRole": "기관 담당자 역할",
-    "supplementaryProperty": "Supplementary property",
-    "supplementaryProperties": "Supplementary properties",
-    "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
-    "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
-    "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
-    "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
-    "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
-    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
+    "supplementaryProperty": "추가 속성",
+    "supplementaryProperties": "추가 속성",
+    "supplementaryProperties.filtersApplied": "{count} 개의 추가 속성 필터가 적용됨",
+    "supplementaryProperties.editCustomPropertyFilters": "추가 속성 필터 편집",
+    "supplementaryProperties.filterBuilder": "추가 속성 필터 빌더",
+    "supplementaryProperties.filterIndex": "추가 속성 필터 {index}",
+    "supplementaryProperties.removeFilter": "추가 속성 필터 {index} 제거",
+    "supplementaryProperties.deprecated": "사용되지 않음: {이름}"
 }
