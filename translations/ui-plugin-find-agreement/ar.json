@@ -24,7 +24,7 @@
     "supplementaryProperties.filtersApplied": "{count} منقح خصائص تكميلية تم تطبيقه",
     "supplementaryProperties.editCustomPropertyFilters": "تحرير منقحات الخصائص التكميلية",
     "supplementaryProperties.filterBuilder": "باني منقح الخاصية التكميلية",
-    "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
-    "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
+    "supplementaryProperties.filterIndex": "منقح الخاصية التكميلية {index}",
+    "supplementaryProperties.removeFilter": "إزالة منقح الخصائص التكميلية {index}",
     "supplementaryProperties.deprecated": "مهمل: {name}"
 }
