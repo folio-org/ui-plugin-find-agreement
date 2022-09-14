@@ -26,5 +26,5 @@
     "supplementaryProperties.filterBuilder": "추가 속성 필터 빌더",
     "supplementaryProperties.filterIndex": "추가 속성 필터 {index}",
     "supplementaryProperties.removeFilter": "추가 속성 필터 {index} 제거",
-    "supplementaryProperties.deprecated": "사용되지 않음: {이름}"
+    "supplementaryProperties.deprecated": "사용되지 않음: {name}"
 }
