@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { useIntlKey } from '@k-int/stripes-kint-components';
+import { useIntlKeyStore } from '@k-int/stripes-kint-components';
 
 import { Button, Icon } from '@folio/stripes/components';
 import contains from 'dom-helpers/query/contains';
@@ -14,7 +14,7 @@ const AgreementSearch = (props) => {
 
   // Piggyback on the translations `ui-agreements` already sets up for now
   // The likelihood of anyone running ui-plugin-find-agreement and NOT ui-agreements seems very low.
-  const addKey = useIntlKey(state => state.addKey);
+  const addKey = useIntlKeyStore(state => state.addKey);
   addKey('ui-agreements');
 
   const modalRef = useRef();
