@@ -203,16 +203,6 @@ export default function Filters({ activeFilters, data, filterHandlers }) {
       activeFilters={activeFilters}
       customPropertiesEndpoint={CUSTPROP_ENDPOINT}
       filterHandlers={filterHandlers}
-      labelOverrides={{
-        customProperty: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperty" />,
-        customProperties: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties" />,
-        filtersApplied: (count) => <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.filtersApplied" values={{ count }} />,
-        editCustomPropertyFilters: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.editCustomPropertyFilters" />,
-        filterBuilder: <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.filterBuilder" />,
-        customPropertyFilter: (index) => <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.filterIndex" values={{ index: index + 1 }} />,
-        removeFilter: (index) => <FormattedMessage id="ui-plugin-find-agreement.supplementaryProperties.removeFilter" values={{ index: index + 1 }} />,
-        retiredName: (name) => intl.formatMessage({ id: 'ui-plugin-find-agreement.supplementaryProperties.deprecated' }, { name }),
-      }}
     />;
   };
 
