@@ -1,10 +1,6 @@
 # Change history for ui-plugin-find-agreement
 
-## 8.3.0 2022-10-26
-* ERM-2374 Kint components dep not declared in ui-plugin-find-agreement
-* ERM-2324 stripes-erm-components should be a peer
-* ERM-2303 update outdated dependencies in ui-plugin-find-agreement
-* ERM-2278 Refactor ui-plugin-find-agreement to react-query
+## 8.3.0 In progress
 * Bump to stripes-erm-components ^7.0.0
 
 ## 8.2.0 2022-07-04
