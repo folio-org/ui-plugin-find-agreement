@@ -1,5 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
+## 8.4.0 In progress
+
 ## 8.3.0 2022-10-26
 * ERM-2374 Kint components dep not declared in ui-plugin-find-agreement
 * ERM-2324 stripes-erm-components should be a peer
