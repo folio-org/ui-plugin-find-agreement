@@ -1,6 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
 ## 8.3.0 In progress
+* Bump to stripes-erm-components ^7.0.0
 
 ## 8.2.0 2022-07-04
 * ERM-2101 Replace babel-eslint with @babel/eslint-parser
