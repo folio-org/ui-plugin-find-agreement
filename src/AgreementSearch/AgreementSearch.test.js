@@ -1,4 +1,5 @@
 import { React } from 'react';
+import user from '@testing-library/user-event';
 import '@folio/stripes-erm-components/test/jest/__mock__';
 import {
   mockKintComponents,
@@ -28,7 +29,8 @@ describe('AgreementSearch', () => {
   });
 
   test('renders the Modal component', () => {
-    const { getByText } = renderComponent;
+    const { getByText, queryByTestId } = renderComponent;
+    user.click(queryByTestId('default-trigger'));
     expect(getByText('Modal')).toBeInTheDocument();
   });
 

@@ -38,6 +38,7 @@ const AgreementSearch = (props) => {
       <Button
         buttonRef={modalTrigger}
         buttonStyle="primary noRightRadius"
+        data-testid="default-trigger"
         id={triggerId}
         onClick={openModal}
       >
