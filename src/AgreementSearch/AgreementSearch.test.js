@@ -1,6 +1,9 @@
 import { React } from 'react';
 import '@folio/stripes-erm-components/test/jest/__mock__';
-import { mockKintComponents, renderWithIntl } from '@folio/stripes-erm-components/test/jest/helpers';
+import {
+  mockKintComponents,
+  renderWithIntl
+} from '@folio/stripes-erm-components/test/jest/helpers';
 import translationsProperties from '../../test/helpers';
 import AgreementSearch from './AgreementSearch';
 
