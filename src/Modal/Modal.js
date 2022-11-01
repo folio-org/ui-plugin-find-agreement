@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { Modal } from '@folio/stripes/components';
 
-import Container from './Container';
-import css from './AgreementSearch.css';
+import Container from '../Container';
+import css from '../AgreementSearch.css';
 
 const AgreementSearchModal = (props) => {
   const {
