@@ -1,5 +1,4 @@
 import { React } from 'react';
-import user from '@testing-library/user-event';
 import '@folio/stripes-erm-components/test/jest/__mock__';
 import { renderWithIntl } from '@folio/stripes-erm-components/test/jest/helpers';
 import { MemoryRouter } from 'react-router-dom';
