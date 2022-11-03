@@ -22,7 +22,7 @@ import {
   SearchAndSortSearchButton as FilterPaneToggle,
 } from '@folio/stripes/smart-components';
 
-import Filters from './Filters/Filters';
+import Filters from './Filters';
 import css from './View.css';
 
 const Agreements = ({
