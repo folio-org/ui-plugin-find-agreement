@@ -152,7 +152,7 @@ const Agreements = ({
   };
 
   return (
-    <div ref={contentRef} data-test-agreements>
+    <div ref={contentRef} data-test-agreements data-testid="containerView">
       <SearchAndSortQuery
         initialFilterState={{
           agreementStatus: ['active', 'draft', 'in_negotiation', 'requested']
