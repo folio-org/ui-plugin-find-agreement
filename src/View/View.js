@@ -22,7 +22,7 @@ import {
   SearchAndSortSearchButton as FilterPaneToggle,
 } from '@folio/stripes/smart-components';
 
-import Filters from './Filters';
+import Filters from '../Filters';
 import css from './View.css';
 
 const Agreements = ({
@@ -152,7 +152,7 @@ const Agreements = ({
   };
 
   return (
-    <div ref={contentRef} data-test-agreements>
+    <div ref={contentRef} data-test-agreements data-testid="containerView">
       <SearchAndSortQuery
         initialFilterState={{
           agreementStatus: ['active', 'draft', 'in_negotiation', 'requested']
