@@ -5,7 +5,7 @@ import { useIntlKeyStore } from '@k-int/stripes-kint-components';
 
 import { Button, Icon } from '@folio/stripes/components';
 import contains from 'dom-helpers/query/contains';
-import Modal from './Modal';
+import Modal from '../Modal';
 
 const triggerId = 'find-agreement-trigger';
 
@@ -38,6 +38,7 @@ const AgreementSearch = (props) => {
       <Button
         buttonRef={modalTrigger}
         buttonStyle="primary noRightRadius"
+        data-testid="default-trigger"
         id={triggerId}
         onClick={openModal}
       >
