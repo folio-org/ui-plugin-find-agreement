@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { Modal } from '@folio/stripes/components';
 
 import Container from '../Container';
-import css from '../AgreementSearch.css';
+import css from '../AgreementSearch/AgreementSearch.css';
 
 const AgreementSearchModal = (props) => {
   const {
