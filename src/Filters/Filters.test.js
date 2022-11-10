@@ -1,32 +1,14 @@
-import { React } from 'react';
 import { waitFor } from '@testing-library/dom';
 
-import '@folio/stripes-erm-components/test/jest/__mock__';
 import {
-  mockKintComponents,
-  mockErmComponents,
   renderWithIntl
-} from '@folio/stripes-erm-components/test/jest/helpers';
+} from '@folio/stripes-erm-testing';
 import { Accordion, Checkbox } from '@folio/stripes-testing';
 import { MemoryRouter } from 'react-router-dom';
 
 import { activeFilters, data } from './testResources';
 import translationsProperties from '../../test/helpers';
 import Filters from './Filters';
-
-jest.mock('@k-int/stripes-kint-components', () => ({
-  ...jest.requireActual('@k-int/stripes-kint-components'),
-  ...mockKintComponents,
-  CustomPropertiesFilter: () => <div>CustomPropertiesFilter</div>,
-}));
-
-jest.mock('@folio/stripes-erm-components', () => ({
-  ...jest.requireActual('@folio/stripes-erm-components'),
-  ...mockErmComponents,
-  OrganizationSelection: () => <div>OrganizationSelection</div>,
-  InternalContactSelection: () => <div>InternalContactSelection</div>,
-  DateFilter: () => <div>DateFilter</div>,
-}));
 
 const stateMock = jest.fn();
 
