@@ -9,7 +9,7 @@ import {
   text
 } from '@bigtest/interactor';
 
-import css from '../../src/AgreementSearch.css';
+import css from '../../src/AgreementSearch/AgreementSearch.css';
 
 @interactor class SearchField {
   static defaultScope = '[data-test-agreement-search-input]';
