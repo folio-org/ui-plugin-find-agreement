@@ -26,5 +26,5 @@
     "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
     "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
     "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
-    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
+    "supplementaryProperties.deprecated": "OBSOLETO: {name}"
 }

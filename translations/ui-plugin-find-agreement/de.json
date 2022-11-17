@@ -19,12 +19,12 @@
     "agreements.endDate": "Enddatum",
     "agreements.internalContacts": "Interne Kontakte",
     "agreements.internalContactsRole": "Rolle des internen Kontakts",
-    "supplementaryProperty": "Supplementary property",
-    "supplementaryProperties": "Supplementary properties",
-    "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
-    "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
-    "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
-    "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
-    "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
-    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
+    "supplementaryProperty": "Ergänzende Eigenschaft",
+    "supplementaryProperties": "Ergänzende Eigenschaften",
+    "supplementaryProperties.filtersApplied": "{count} Ergänzende Eigenschaftsfilter angewendet",
+    "supplementaryProperties.editCustomPropertyFilters": "Ergänzende Eigenschaftsfilter bearbeiten",
+    "supplementaryProperties.filterBuilder": "Ergänzende Eigenschaftsfilter-Baukasten",
+    "supplementaryProperties.filterIndex": "Ergänzende Eigenschaftsfilter {index}",
+    "supplementaryProperties.removeFilter": "Ergänzenden Eigenschaftsfilter {index} entfernen",
+    "supplementaryProperties.deprecated": "VERALTET: {name}"
 }
