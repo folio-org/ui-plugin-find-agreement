@@ -1,5 +1,7 @@
 import { renderWithIntl } from '@folio/stripes-erm-testing';
 import { MemoryRouter } from 'react-router-dom';
+import { Button } from '@folio/stripes-testing';
+
 import translationsProperties from '../../test/helpers';
 import Modal from './Modal';
 
@@ -48,13 +50,12 @@ describe('Modal', () => {
     expect(getByText('SelectAgreement')).toBeInTheDocument();
   });
 
-  test('renders the expected button name', () => {
-    const { getByRole } = renderComponent;
-    expect(getByRole('button', { name: 'stripes-components.dismissModal' }));
+  test('renders the dismissModal button', async () => {
+    await Button('SelectAgreement,Container').exists();
   });
 
   test('renders the expected heading name', () => {
-    const { getByRole } = renderComponent;
-    expect(getByRole('heading', { name: 'Select agreement' }));
+    const { getByText } = renderComponent;
+    expect(getByText('Select agreement')).toBeInTheDocument();
   });
 });
