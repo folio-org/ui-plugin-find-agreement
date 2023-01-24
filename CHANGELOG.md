@@ -1,6 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
 ## 8.4.0 In progress
+* ERM-2614 Drop unneeded `react-redux`.
 
 ## 8.3.0 2022-10-26
 * ERM-2374 Kint components dep not declared in ui-plugin-find-agreement
