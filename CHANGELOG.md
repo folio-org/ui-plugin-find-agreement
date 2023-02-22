@@ -1,6 +1,6 @@
 # Change history for ui-plugin-find-agreement
 
-## 9.0.1 2023-02-22
+## 9.0.2 2023-02-22
 * ERM-2614 Drop unneeded `react-redux`.
 * ERM-2557 Increment ui-plugin-find-agreement to Stripes v8
 * ERM-2530 Remove BigTest/Nightmare dependencies and tests (ui-plugin-find-agreement)
