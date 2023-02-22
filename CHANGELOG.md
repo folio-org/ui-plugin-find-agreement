@@ -1,7 +1,16 @@
 # Change history for ui-plugin-find-agreement
 
-## 8.4.0 In progress
+## 9.0.2 2023-02-22
 * ERM-2614 Drop unneeded `react-redux`.
+* ERM-2557 Increment ui-plugin-find-agreement to Stripes v8
+* ERM-2530 Remove BigTest/Nightmare dependencies and tests (ui-plugin-find-agreement)
+* ERM-2457 Bump ui-plugin-find-agreement erm-components dep
+* ERM-2405 Add test coverage for ui-plugin-find-agreement <View>
+* ERM-2404 Add test coverage for ui-plugin-find-agreement <Modal>
+* ERM-2403 Add test coverage for ui-plugin-find-agreement <Filters>
+* ERM-2402 Add test coverage for ui-plugin-find-agreement <Container>
+* ERM-1304 Add test coverage for ui-plugin-find-agreement <AgreementSearch>
+* Remove karma test options from github release actions
 
 ## 8.3.0 2022-10-26
 * ERM-2374 Kint components dep not declared in ui-plugin-find-agreement
