@@ -161,6 +161,7 @@ const Agreements = ({
         initialSortState={{ sort: 'name' }}
         queryGetter={queryGetter}
         querySetter={querySetter}
+        setQueryOnMount
         syncToLocationSearch={false}
       >
         {
