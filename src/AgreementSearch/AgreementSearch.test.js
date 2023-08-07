@@ -1,4 +1,4 @@
-import user from '@testing-library/user-event';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import {
   renderWithIntl
@@ -23,7 +23,7 @@ describe('AgreementSearch', () => {
 
   test('renders the Modal component', () => {
     const { getByText, queryByTestId } = renderComponent;
-    user.click(queryByTestId('default-trigger'));
+    userEvent.click(queryByTestId('default-trigger'));
     expect(getByText('Modal')).toBeInTheDocument();
   });
 
