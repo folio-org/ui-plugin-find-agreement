@@ -1,7 +1,9 @@
 # Change history for ui-plugin-find-agreement
 
-## 10.1.0 In progress
+## 11.0.0 2024-03-22
 * ERM-3129 Remove explicit typescript version
+* Bumped folio dependencies
+* *BREAKING* Change interface dependency for erm to just 7.0
 
 ## 10.0.0 2023-10-12
 * ERM-3029 *BREAKING* bump `react-intl` to `v6.4.4`.
