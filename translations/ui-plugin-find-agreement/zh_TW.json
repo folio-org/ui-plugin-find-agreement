@@ -1,6 +1,6 @@
 {
     "selectAgreement": "選擇協議",
-    "meta.title": "ERM協議查詢器（插件）",
+    "meta.title": "ERM協議查詢器（外掛程式）",
     "agreements": "協議",
     "searchInputLabel": "查詢協議",
     "prop.agreementStatus": "狀態",
@@ -13,7 +13,7 @@
     "prop.tags": "標籤",
     "prop.periodEnd": "期間结束",
     "prop.periodStart": "期間開始",
-    "permission.search": "尋找協議查詢器（插件）：查詢協議",
+    "permission.search": "尋找協議查詢器（外掛程式）：查詢協議",
     "organizations.selectRole": "選擇一個身份",
     "agreements.startDate": "開始日期",
     "agreements.endDate": "結束日期",
@@ -26,5 +26,5 @@
     "supplementaryProperties.filterBuilder": "補充屬性過濾器產生器",
     "supplementaryProperties.filterIndex": "補充屬性過濾器 {index}",
     "supplementaryProperties.removeFilter": "刪除補充屬性過濾器 {index}",
-    "supplementaryProperties.deprecated": "已棄用： {name}"
+    "supplementaryProperties.deprecated": "已捨棄： {name}"
 }
