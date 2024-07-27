@@ -20,7 +20,7 @@
     "agreements.internalContacts": "Internal contacts",
     "agreements.internalContactsRole": "Internal contact role",
     "supplementaryProperty": "Supplementary property",
-    "supplementaryProperties": "Supplementary properties",
+    "supplementaryProperties": "Dodatkowe właściwości",
     "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
     "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
     "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
