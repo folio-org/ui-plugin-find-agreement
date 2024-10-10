@@ -1,6 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
 ## 11.1.0 In progress
+* FOLIO-4086 Fix GitHub Actions workflow not running for tags
 
 ## 11.0.1 2024-03-22
 * ERM-3129 Remove explicit typescript version
