@@ -1,5 +1,7 @@
 # Change history for ui-plugin-find-agreement
 
+## 11.2.0 IN PROGRESS
+
 ## 11.1.0 2024-10-31
 * ERM-3382 Update module license and guidance for ui-plugin-find-agreement
 * ERM-3355 Review and cleanup Module Descriptor for ui-plugin-find-agreement
