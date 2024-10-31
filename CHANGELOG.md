@@ -1,6 +1,10 @@
 # Change history for ui-plugin-find-agreement
 
-## 11.1.0 In progress
+## 11.1.0 2024-10-31
+* ERM-3382 Update module license and guidance for ui-plugin-find-agreement
+* ERM-3355 Review and cleanup Module Descriptor for ui-plugin-find-agreement
+* ERM-3235 React v19: refactor ui-plugin-find-agreement away from default props for functional components
+* ERM-3165 Replace moment with dayjs across app suite
 * FOLIO-4086 Fix GitHub Actions workflow not running for tags
 
 ## 11.0.1 2024-03-22
