@@ -16,7 +16,7 @@
     "permission.search": "Wtyczka wyszukiwania umów: Szukaj umów",
     "organizations.selectRole": "Wybierz rolę",
     "agreements.startDate": "Data początkowa",
-    "agreements.endDate": "Data zakończenia",
+    "agreements.endDate": "Data końcowa",
     "agreements.internalContacts": "Kontakty wewnętrzne",
     "agreements.internalContactsRole": "Rola kontaktu wewnętrznego",
     "supplementaryProperty": "Dodatkowa właściwość",
