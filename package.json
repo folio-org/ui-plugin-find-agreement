@@ -1,6 +1,6 @@
 {
   "name": "@folio/plugin-find-agreement",
-  "version": "12.0.0",
+  "version": "12.1.0",
   "description": "ERM-agreement-finder for Stripes",
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
