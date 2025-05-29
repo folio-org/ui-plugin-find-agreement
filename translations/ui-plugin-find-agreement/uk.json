@@ -1,7 +1,7 @@
 {
     "selectAgreement": "Select agreement",
     "meta.title": "Agreement Finder Plugin",
-    "agreements": "Agreements",
+    "agreements": "Угоди",
     "searchInputLabel": "Пошук угод",
     "prop.agreementStatus": "Status",
     "prop.cancellationDeadline": "Cancellation deadline",
@@ -15,7 +15,7 @@
     "prop.periodStart": "Period start",
     "permission.search": "Find Agreement Plugin: Search agreements",
     "organizations.selectRole": "Select a role",
-    "agreements.startDate": "Start date",
+    "agreements.startDate": "Дата початку",
     "agreements.endDate": "Дата закінчення",
     "agreements.internalContacts": "Внутрішні контакти",
     "agreements.internalContactsRole": "Роль внутрішнього контакту",
