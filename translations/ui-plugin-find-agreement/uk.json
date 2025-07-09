@@ -1,5 +1,5 @@
 {
-    "selectAgreement": "Select agreement",
+    "selectAgreement": "Вибрати угоду",
     "meta.title": "Плагін для Пошуку угод",
     "agreements": "Угоди",
     "searchInputLabel": "Пошук угод",
@@ -10,7 +10,7 @@
     "prop.organizations": "Організації",
     "prop.orgRole": "Роль організації",
     "prop.renewalPriority": "Пріоритет поновлення",
-    "prop.tags": "Tags",
+    "prop.tags": "Теги",
     "prop.periodEnd": "Кінець періоду",
     "prop.periodStart": "Початок періоду",
     "permission.search": "Плагін Пошуку угод (Find Agreement): Пошук угод",
@@ -19,12 +19,12 @@
     "agreements.endDate": "Дата закінчення",
     "agreements.internalContacts": "Внутрішні контакти",
     "agreements.internalContactsRole": "Роль внутрішнього контакту",
-    "supplementaryProperty": "Supplementary property",
-    "supplementaryProperties": "Supplementary properties",
-    "supplementaryProperties.filtersApplied": "{count} supplementary property filters applied",
-    "supplementaryProperties.editCustomPropertyFilters": "Edit supplementary property filters",
-    "supplementaryProperties.filterBuilder": "Supplementary property filter builder",
-    "supplementaryProperties.filterIndex": "Supplementary property filter {index}",
-    "supplementaryProperties.removeFilter": "Remove supplementary property filter {index}",
-    "supplementaryProperties.deprecated": "DEPRECATED: {name}"
+    "supplementaryProperty": "Додаткова властивість",
+    "supplementaryProperties": "Додаткові властивості",
+    "supplementaryProperties.filtersApplied": "Застосовано {count} фільтрів додаткових властивостей",
+    "supplementaryProperties.editCustomPropertyFilters": "Редагувати фільтри додаткових властивостей",
+    "supplementaryProperties.filterBuilder": "Конструктор фільтрів додаткових властивостей",
+    "supplementaryProperties.filterIndex": "Фільтр додаткових властивостей {index}",
+    "supplementaryProperties.removeFilter": "Вилучити додатковий фільтр властивостей {index}",
+    "supplementaryProperties.deprecated": "ЗАСТАРІЛЕ: {name}"
 }
