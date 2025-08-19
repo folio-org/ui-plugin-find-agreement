@@ -26,5 +26,5 @@
     "supplementaryProperties.filterBuilder": "Construtor de filtros de propriedade suplementar",
     "supplementaryProperties.filterIndex": "Filtro de propriedade suplementar {index}",
     "supplementaryProperties.removeFilter": "Remover o filtro de propriedade suplementar {index}",
-    "supplementaryProperties.deprecated": "OBSOLETO: {name}"
+    "supplementaryProperties.deprecated": "DESCONTINUADO: {name}"
 }
