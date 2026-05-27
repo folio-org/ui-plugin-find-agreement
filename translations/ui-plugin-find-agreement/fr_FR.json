@@ -18,7 +18,7 @@
     "agreements.startDate": "Date de début",
     "agreements.endDate": "Date de fin",
     "agreements.internalContacts": "Contacts internes",
-    "agreements.internalContactsRole": "Internal contact role",
+    "agreements.internalContactsRole": "Fonction du contact interne",
     "supplementaryProperty": "Critère supplémentaire",
     "supplementaryProperties": "Critères supplémentaires",
     "supplementaryProperties.filtersApplied": "{count} filtres de critère supplémentaire appliqués",
